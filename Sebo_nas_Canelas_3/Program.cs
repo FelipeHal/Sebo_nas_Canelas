@@ -42,6 +42,51 @@ namespace Sebo_nas_Canelas_3
                     Console.WriteLine("9)Literatura Estrangeira");
                     Console.WriteLine("10)Livros Raros");
                     Console.WriteLine("11)Outros assuntos");
+
+                    Console.WriteLine("Por favor, digite os estilos que deseja consultar:");
+
+                    string[] estilos = new string[11];
+                    for (int i = 0; i < estilos.Length; i++)
+                    {
+                        estilos[i] = Console.ReadLine();
+                        Console.WriteLine("Há outro estilo que também gostaria de consultar?");
+                        Console.WriteLine("S/N");
+                        string resposta = Console.ReadLine();
+
+
+                        if (resposta == "S")
+                        {
+                            for (int a = 0; a < estilos.Length; a++)
+                            {
+                                Console.WriteLine("Estilos que deseja consultar: " + estilos[a]);
+                            }
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("Podemos ajudá-lo com algo mais?");
+                            Console.WriteLine("1) Sim, por favor.");
+                            Console.WriteLine("2) Não, obrigado.");
+                            number = Convert.ToInt32(Console.ReadLine());
+                            if (number == 1)
+                            {
+                                opcaoInvalida = true;
+                            }
+                            else if (number == 2)
+                            {
+                                opcaoInvalida = false;
+                                Console.WriteLine("");
+                                Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
+                            }
+                        }
+                        
+                        //Console.WriteLine("Você deseja consultar os estilos:");
+                        //for (i = 0; i < estilos.Length ; i++)
+                         //   { Console.WriteLine($"1º estilo: {estilos[i]}"); }
+                        
+                        
+                        
+                    }
                 }
 
                 else if (number == 2)
