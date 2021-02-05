@@ -43,11 +43,10 @@ namespace Sebo_nas_Canelas_3
                     Console.WriteLine("10)Livros Raros");
                     Console.WriteLine("11)Outros assuntos");
 
-                    Console.WriteLine("Por favor, digite três estilos que deseja consultar:");
+                    Console.WriteLine("Por favor, digite cinco estilos que deseja consultar:");
 
-                    string[] estilos = new string[3];
-                    foreach (string estilo in estilos)
-                    {
+                    string[] estilos = new string[5];
+                    
                         for (int i = 0; i < estilos.Length; i++)
                         {
                             estilos[i] = Console.ReadLine();
@@ -61,9 +60,8 @@ namespace Sebo_nas_Canelas_3
                         for (int i = 0; i < estilos.Length; i++)
                         {
                             Console.WriteLine(estilos[i]);
-
                         }
-                    }
+                    
                         
                     //if (resposta == "S")
                     //{
