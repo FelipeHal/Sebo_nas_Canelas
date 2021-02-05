@@ -46,56 +46,58 @@ namespace Sebo_nas_Canelas_3
                     Console.WriteLine("Por favor, digite três estilos que deseja consultar:");
 
                     string[] estilos = new string[3];
-                    for (int i = 0; i < estilos.Length; i++)
+                    foreach (string estilo in estilos)
                     {
-                        estilos[i] = Console.ReadLine();
+                        for (int i = 0; i < estilos.Length; i++)
+                        {
+                            estilos[i] = Console.ReadLine();
+
+                        }
+
+                        Console.WriteLine("");
+                        Console.WriteLine("Os estilos que você deseja consultar são: ");
+                        Console.WriteLine("");
+
+                        for (int i = 0; i < estilos.Length; i++)
+                        {
+                            Console.WriteLine(estilos[i]);
+
+                        }
+                    }
                         
-                    }
+                    //if (resposta == "S")
+                    //{
+                    //  for (int a = 0; a < estilos.Length; a++)
+                    //  {
+                    //      Console.WriteLine("Estilos que deseja consultar: " + estilos[a]);
+                    //  }
+                    //    
+                    //}
+                    //else
+                    //{
+                    //  Console.WriteLine("Podemos ajudá-lo com algo mais?");
+                    //Console.WriteLine("1) Sim, por favor.");
+                    //Console.WriteLine("2) Não, obrigado.");
+                    //number = Convert.ToInt32(Console.ReadLine());
+                    //if (number == 1)
+                    //{
+                    //opcaoInvalida = true;
+                    //}
+                    //else if (number == 2)
+                    //{
+                    //opcaoInvalida = false;
+                    //Console.WriteLine("");
+                    //Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
+                    // }
+                    //}
 
-                    Console.WriteLine("");
-                    Console.WriteLine("Os estilos que você deseja consultar são: ");
-                    Console.WriteLine("");
-
-                    for (int i = 0; i < estilos.Length; i++)
-                    {
-                        Console.WriteLine($"1º estilo: {estilos[i]}");
-                        Console.WriteLine($"2º estilo: {estilos[i]}");
-                        Console.WriteLine($"3º estilo: {estilos[i]}");
-                    }
-
-                        //if (resposta == "S")
-                        //{
-                        //  for (int a = 0; a < estilos.Length; a++)
-                        //  {
-                        //      Console.WriteLine("Estilos que deseja consultar: " + estilos[a]);
-                        //  }
-                        //    
-                        //}
-                        //else
-                        //{
-                        //  Console.WriteLine("Podemos ajudá-lo com algo mais?");
-                        //Console.WriteLine("1) Sim, por favor.");
-                        //Console.WriteLine("2) Não, obrigado.");
-                        //number = Convert.ToInt32(Console.ReadLine());
-                        //if (number == 1)
-                        //{
-                        //opcaoInvalida = true;
-                        //}
-                        //else if (number == 2)
-                        //{
-                        //opcaoInvalida = false;
-                        //Console.WriteLine("");
-                        //Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-                        // }
-                        //}
-
-                        //Console.WriteLine("Você deseja consultar os estilos:");
-                        //for (i = 0; i < estilos.Length ; i++)
-                        //   { Console.WriteLine($"1º estilo: {estilos[i]}"); }
+                    //Console.WriteLine("Você deseja consultar os estilos:");
+                    //for (i = 0; i < estilos.Length ; i++)
+                    //   { Console.WriteLine($"1º estilo: {estilos[i]}"); }
 
 
 
-                    
+
                 }
 
                 else if (number == 2)
