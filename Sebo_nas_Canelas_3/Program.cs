@@ -43,30 +43,25 @@ namespace Sebo_nas_Canelas_3
                     Console.WriteLine("10)Livros Raros");
                     Console.WriteLine("11)Outros assuntos");
 
-                    Console.WriteLine("Por favor, digite os estilos que deseja consultar:");
+                    Console.WriteLine("Por favor, digite três estilos que deseja consultar:");
 
                     string[] estilos = new string[3];
                     for (int i = 0; i < estilos.Length; i++)
                     {
                         estilos[i] = Console.ReadLine();
-                        Console.WriteLine($"1º estilo: {estilos[0]}");
-                        Console.WriteLine($"2º estilo: {estilos[1]}");
-                        Console.WriteLine($"3º estilo: {estilos[2]}");
-                        Console.WriteLine("Há outro estilo que também gostaria de consultar?");
-                        Console.WriteLine("S/N");
-                        string resposta = Console.ReadLine();
-                        Console.WriteLine($"1º estilo: {estilos[0]}");
-                        Console.WriteLine($"2º estilo: {estilos[1]}");
-                        Console.WriteLine($"3º estilo: {estilos[2]}");
+                        
+                    }
 
-                        if (resposta == "N")
-                        { break; }
+                    Console.WriteLine("");
+                    Console.WriteLine("Os estilos que você deseja consultar são: ");
+                    Console.WriteLine("");
 
-
-
-
-
-
+                    for (int i = 0; i < estilos.Length; i++)
+                    {
+                        Console.WriteLine($"1º estilo: {estilos[i]}");
+                        Console.WriteLine($"2º estilo: {estilos[i]}");
+                        Console.WriteLine($"3º estilo: {estilos[i]}");
+                    }
 
                         //if (resposta == "S")
                         //{
@@ -100,7 +95,7 @@ namespace Sebo_nas_Canelas_3
 
 
 
-                    }
+                    
                 }
 
                 else if (number == 2)
