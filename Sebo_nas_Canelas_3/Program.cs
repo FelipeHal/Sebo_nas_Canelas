@@ -59,8 +59,8 @@ namespace Sebo_nas_Canelas_3
                         Console.WriteLine($"2º estilo: {estilos[1]}");
                         Console.WriteLine($"3º estilo: {estilos[2]}");
 
-                        
-
+                        if (resposta == "N")
+                        { break; }
 
 
 
