@@ -43,18 +43,25 @@ namespace Sebo_nas_Canelas_3
                     Console.WriteLine("10)Livros Raros");
                     Console.WriteLine("11)Outros assuntos");
 
-                    Console.WriteLine("Por favor, digite cinco estilos que deseja consultar:");
+                    Console.WriteLine("Por favor, digite os estilos que deseja consultar:");
 
-                    string[] estilos = new string[5];
-                    
+                    string[] estilos = new string[99_999_999];
+                    List<string> estilo = new List<string>();
+
                     for (int i = 0; i < estilos.Length; i++)
                     {
                         estilos[i] = Console.ReadLine();
-
+                        myList.Add(i++);
                         Console.WriteLine("Gostaria de consultar outro estilo? (S/N)");
                         string resposta = Console.ReadLine();
-                        if (resposta == "S")
 
+                        if (resposta == "S")
+                        {
+                            Console.WriteLine("Estilos que deseja consultar: ", estilos[i]);
+                        }
+
+                        else
+                        { break; }
 
                     }
                     
@@ -68,36 +75,36 @@ namespace Sebo_nas_Canelas_3
                     }
                     
                         
-                    //if (resposta == "S")
-                    //{
-                    //  for (int a = 0; a < estilos.Length; a++)
-                    //  {
-                    //      Console.WriteLine("Estilos que deseja consultar: " + estilos[a]);
-                    //  }
-                    //    
-                    //}
-                    //else
-                    //{
-                    //  Console.WriteLine("Podemos ajudá-lo com algo mais?");
-                    //Console.WriteLine("1) Sim, por favor.");
-                    //Console.WriteLine("2) Não, obrigado.");
-                    //number = Convert.ToInt32(Console.ReadLine());
-                    //if (number == 1)
-                    //{
-                    //opcaoInvalida = true;
-                    //}
-                    //else if (number == 2)
-                    //{
-                    //opcaoInvalida = false;
-                    //Console.WriteLine("");
-                    //Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-                    // }
-                    //}
+                    /*if (resposta == "S")
+                    {
+                      for (int a = 0; a < estilos.Length; a++)
+                      {
+                          Console.WriteLine("Estilos que deseja consultar: " + estilos[a]);
+                      }
+                        
+                    }
+                    else
+                    {
+                      Console.WriteLine("Podemos ajudá-lo com algo mais?");
+                    Console.WriteLine("1) Sim, por favor.");
+                    Console.WriteLine("2) Não, obrigado.");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    if (number == 1)
+                    {
+                    opcaoInvalida = true;
+                    }
+                    else if (number == 2)
+                    {
+                    opcaoInvalida = false;
+                    Console.WriteLine("");
+                    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
+                     }
+                    }
 
-                    //Console.WriteLine("Você deseja consultar os estilos:");
-                    //for (i = 0; i < estilos.Length ; i++)
-                    //   { Console.WriteLine($"1º estilo: {estilos[i]}"); }
-
+                    Console.WriteLine("Você deseja consultar os estilos:");
+                    for (i = 0; i < estilos.Length ; i++)
+                       { Console.WriteLine($"1º estilo: {estilos[i]}"); }
+                    */
 
 
 
@@ -192,4 +199,5 @@ namespace Sebo_nas_Canelas_3
 
         }
     }
+
 }
