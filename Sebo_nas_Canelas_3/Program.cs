@@ -59,7 +59,7 @@ namespace Sebo_nas_Canelas_3
                         if (resposta == "S")
                         {
                             ArrayList estilosList = new ArrayList();
-                            estilosList.Add = Console.ReadLine(estilos[i]);
+                            estilosList.Add = estilos[i];
                             Console.WriteLine("Estilos que deseja consultar: ", estilos[i]);
                             
                         }
