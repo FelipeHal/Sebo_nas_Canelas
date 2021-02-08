@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Sebo_nas_Canelas_3
 {
@@ -47,17 +48,20 @@ namespace Sebo_nas_Canelas_3
 
                     string[] estilos = new string[99_999_999];
                     List<string> estilo = new List<string>();
-
+                    //ArrayList estilosList = new ArrayList();
+                    
                     for (int i = 0; i < estilos.Length; i++)
                     {
                         estilos[i] = Console.ReadLine();
-                        myList.Add(i++);
                         Console.WriteLine("Gostaria de consultar outro estilo? (S/N)");
                         string resposta = Console.ReadLine();
 
                         if (resposta == "S")
                         {
+                            ArrayList estilosList = new ArrayList();
+                            estilosList.Add = Console.ReadLine(estilos[i]);
                             Console.WriteLine("Estilos que deseja consultar: ", estilos[i]);
+                            
                         }
 
                         else
