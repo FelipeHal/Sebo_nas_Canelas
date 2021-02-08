@@ -47,20 +47,25 @@ namespace Sebo_nas_Canelas_3
 
                     string[] estilos = new string[5];
                     
-                        for (int i = 0; i < estilos.Length; i++)
-                        {
-                            estilos[i] = Console.ReadLine();
+                    for (int i = 0; i < estilos.Length; i++)
+                    {
+                        estilos[i] = Console.ReadLine();
 
-                        }
+                        Console.WriteLine("Gostaria de consultar outro estilo? (S/N)");
+                        string resposta = Console.ReadLine();
+                        if (resposta == "S")
 
-                        Console.WriteLine("");
-                        Console.WriteLine("Os estilos que você deseja consultar são: ");
-                        Console.WriteLine("");
 
-                        for (int i = 0; i < estilos.Length; i++)
-                        {
-                            Console.WriteLine(estilos[i]);
-                        }
+                    }
+                    
+                    Console.WriteLine("");
+                    Console.WriteLine("Os estilos que você deseja consultar são: ");
+                    Console.WriteLine("");
+                    
+                    for (int i = 0; i < estilos.Length; i++)
+                    {
+                        Console.WriteLine(estilos[i]);
+                    }
                     
                         
                     //if (resposta == "S")
