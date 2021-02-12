@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Sebo_nas_Canelas_3/1.0.0": {
+        "runtime": {
+          "Sebo_nas_Canelas_3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sebo_nas_Canelas_3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
