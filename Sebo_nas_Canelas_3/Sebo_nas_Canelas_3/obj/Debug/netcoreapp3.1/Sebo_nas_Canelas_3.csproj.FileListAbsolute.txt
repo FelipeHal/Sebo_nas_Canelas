@@ -11,3 +11,16 @@ C:\Users\PICHAU\source\repos\_Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\Sebo_nas_Can
 C:\Users\PICHAU\source\repos\_Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.dll
 C:\Users\PICHAU\source\repos\_Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.pdb
 C:\Users\PICHAU\source\repos\_Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.genruntimeconfig.cache
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\bin\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.exe
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\bin\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.deps.json
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\bin\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.runtimeconfig.json
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\bin\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.runtimeconfig.dev.json
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\bin\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.dll
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\bin\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.pdb
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.csprojAssemblyReference.cache
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.AssemblyInfoInputs.cache
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.AssemblyInfo.cs
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.csproj.CoreCompileInputs.cache
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.dll
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.pdb
+C:\Users\PICHAU\source\repos\Sebo_nas_Canelas\Sebo_nas_Canelas_3\Sebo_nas_Canelas_3\obj\Debug\netcoreapp3.1\Sebo_nas_Canelas_3.genruntimeconfig.cache
