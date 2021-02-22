@@ -133,7 +133,7 @@ namespace Sebo_nas_Canelas_3
 
         }
 
-        static void Opçao1_ComList ()
+        static void Opçao1_ComList()
         {
             Console.WriteLine("");
             Console.WriteLine("1)Biografia");
@@ -157,8 +157,8 @@ namespace Sebo_nas_Canelas_3
             do
             {
                 estilosList.Add(Console.ReadLine());
-            
-            
+
+
                 Console.WriteLine("Deseja consultar outros estilos? (S/N");
                 resposta = Console.ReadLine();
 
@@ -170,8 +170,8 @@ namespace Sebo_nas_Canelas_3
 
             for (int i = 0; i < estilosList.Count; i++)
             {
-               
-               Console.WriteLine($"{i + 1}º estilo: {estilosList[i]}");
+
+                Console.WriteLine($"{i + 1}º estilo: {estilosList[i]}");
             }
         }
 
@@ -189,6 +189,4 @@ namespace Sebo_nas_Canelas_3
             Console.WriteLine("9) Outros");
         }
     }
-
 }
-
