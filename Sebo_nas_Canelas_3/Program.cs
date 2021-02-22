@@ -32,24 +32,25 @@ namespace Sebo_nas_Canelas_3
                 if (opcao == 1)
                 {
                     Opçao1_ComList();
-                    do
-                    {
-                        estilosList.Add(Console.ReadLine());
+                    //do
+                    //{
+                    //    estilosList.Add(Console.ReadLine());
+                    //
+                    //
+                    //    Console.WriteLine("Deseja consultar outros estilos? (S/N");
+                    //   resposta = Console.ReadLine();
 
-                        Console.WriteLine("Deseja consultar outros estilos? (S/N");
-                        resposta = Console.ReadLine();
+                    //} while (resposta == "S");
 
-                    } while (resposta == "S");
+                    //Console.WriteLine();
+                    //Console.WriteLine("Os estilos que você deseja consultar são: ");
+                    //Console.WriteLine();
 
-                    Console.WriteLine();
-                    Console.WriteLine("Os estilos que você deseja consultar são: ");
-                    Console.WriteLine();
-
-                    for (int i = 0; i < estilosList.Count; i++)
-                    {
-
-                        Console.WriteLine($"{i + 1}º estilo: {estilosList[i]}");
-                    }
+                    //for (int i = 0; i < estilosList.Count; i++)
+                    //{
+                    //   
+                    //   Console.WriteLine($"{i + 1}º estilo: {estilosList[i]}");
+                    //}
                 }
 
                 else if (opcao == 2)
@@ -153,25 +154,25 @@ namespace Sebo_nas_Canelas_3
             string resposta;
 
 
-            //do
-            //{
-            //    estilosList.Add(Console.ReadLine());
-            //
-            //
-            //    Console.WriteLine("Deseja consultar outros estilos? (S/N");
-             //   resposta = Console.ReadLine();
-//
-            //} while (resposta == "S");
+            do
+            {
+                estilosList.Add(Console.ReadLine());
+            
+            
+                Console.WriteLine("Deseja consultar outros estilos? (S/N");
+                resposta = Console.ReadLine();
 
-            //Console.WriteLine();
-            //Console.WriteLine("Os estilos que você deseja consultar são: ");
-            //Console.WriteLine();
+            } while (resposta == "S");
 
-            //for (int i = 0; i < estilosList.Count; i++)
-            //{
-             //   
-             //   Console.WriteLine($"{i + 1}º estilo: {estilosList[i]}");
-            //}
+            Console.WriteLine();
+            Console.WriteLine("Os estilos que você deseja consultar são: ");
+            Console.WriteLine();
+
+            for (int i = 0; i < estilosList.Count; i++)
+            {
+               
+               Console.WriteLine($"{i + 1}º estilo: {estilosList[i]}");
+            }
         }
 
         static void Opçao2_ComList()
