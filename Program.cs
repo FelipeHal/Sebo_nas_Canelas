@@ -10,11 +10,13 @@ namespace Sebo_nas_Canelas_3
 
 
             bool opcaoInvalida = false;
+            Header();
             Console.WriteLine("Seja bem vindo! Digite o nome de usuário:");
             string name = Convert.ToString(Console.ReadLine());
 
             do
             {
+                Header();
                 Console.WriteLine("");
                 Console.WriteLine($"Olá, {name}, o que gostaria de fazer?");
 
@@ -31,35 +33,20 @@ namespace Sebo_nas_Canelas_3
 
                 if (opcao == 1)
                 {
+                    Header();
                     Opçao1_ComList();
-                    //do
-                    //{
-                    //    estilosList.Add(Console.ReadLine());
-                    //
-                    //
-                    //    Console.WriteLine("Deseja consultar outros estilos? (S/N");
-                    //   resposta = Console.ReadLine();
-
-                    //} while (resposta == "S");
-
-                    //Console.WriteLine();
-                    //Console.WriteLine("Os estilos que você deseja consultar são: ");
-                    //Console.WriteLine();
-
-                    //for (int i = 0; i < estilosList.Count; i++)
-                    //{
-                    //   
-                    //   Console.WriteLine($"{i + 1}º estilo: {estilosList[i]}");
-                    //}
+                    
                 }
 
                 else if (opcao == 2)
                 {
+                    Header();
                     Opçao2_ComList();
                 }
 
                 else if (opcao == 3)
                 {
+                    Header();
                     Console.WriteLine("");
                     Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
                     Console.WriteLine("");
@@ -80,6 +67,7 @@ namespace Sebo_nas_Canelas_3
                 }
                 else if (opcao == 4)
                 {
+                    Header();
                     Console.WriteLine("");
                     Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
                     Console.WriteLine("");
@@ -100,6 +88,7 @@ namespace Sebo_nas_Canelas_3
                 }
                 else if (opcao == 5)
                 {
+                    Header();
                     Console.WriteLine("");
                     Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
                     Console.WriteLine("");
@@ -159,7 +148,7 @@ namespace Sebo_nas_Canelas_3
                 estilosList.Add(Console.ReadLine());
 
 
-                Console.WriteLine("Deseja consultar outros estilos? (S/N");
+                Console.WriteLine("Deseja consultar outros estilos? (S/N)");
                 resposta = Console.ReadLine();
 
             } while (resposta == "S");
@@ -187,6 +176,15 @@ namespace Sebo_nas_Canelas_3
             Console.WriteLine("7) RPG");
             Console.WriteLine("8) Card Game");
             Console.WriteLine("9) Outros");
+        }
+
+        static void Header ()
+        {
+            Console.Clear();
+            Console.WriteLine("   ##########################");
+            Console.WriteLine("  ########   SEBO   ########");
+            Console.WriteLine(" ######   NAS CANELAS   ###");
+            Console.WriteLine("##########################");
         }
     }
 }
