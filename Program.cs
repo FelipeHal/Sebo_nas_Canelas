@@ -34,25 +34,20 @@ namespace Sebo_nas_Canelas_3
                 if (opcao == 1)
                 {
                     Header();
-                    Opçao1_ComList();
+                    Option1_ComList();
                     
                 }
 
                 else if (opcao == 2)
                 {
                     Header();
-                    Opçao2_ComList();
+                    Option2_ComList();
                 }
 
                 else if (opcao == 3)
                 {
                     Header();
-                    Console.WriteLine("");
-                    Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
-                    Console.WriteLine("");
-                    Console.WriteLine("Podemos ajudá-lo com algo mais?");
-                    Console.WriteLine("1) Sim, por favor.");
-                    Console.WriteLine("2) Não, obrigado.");
+                    Option3_ComList();                    
                     opcao = Convert.ToInt32(Console.ReadLine());
                     if (opcao == 1)
                     {
@@ -68,12 +63,7 @@ namespace Sebo_nas_Canelas_3
                 else if (opcao == 4)
                 {
                     Header();
-                    Console.WriteLine("");
-                    Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
-                    Console.WriteLine("");
-                    Console.WriteLine("Podemos ajudá-lo com algo mais?");
-                    Console.WriteLine("1) Sim, por favor.");
-                    Console.WriteLine("2) Não, obrigado.");
+                    Option4_ComList();                    
                     opcao = Convert.ToInt32(Console.ReadLine());
                     if (opcao == 1)
                     {
@@ -89,12 +79,7 @@ namespace Sebo_nas_Canelas_3
                 else if (opcao == 5)
                 {
                     Header();
-                    Console.WriteLine("");
-                    Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
-                    Console.WriteLine("");
-                    Console.WriteLine("Podemos ajudá-lo com algo mais?");
-                    Console.WriteLine("1) Sim, por favor.");
-                    Console.WriteLine("2) Não, obrigado.");
+                    Option5_ComList();                    
                     opcao = Convert.ToInt32(Console.ReadLine());
                     if (opcao == 1)
                     {
@@ -122,7 +107,7 @@ namespace Sebo_nas_Canelas_3
 
         }
 
-        static void Opçao1_ComList()
+        static void Option1_ComList()
         {
             Console.WriteLine("");
             Console.WriteLine("1)Biografia");
@@ -164,7 +149,7 @@ namespace Sebo_nas_Canelas_3
             }
         }
 
-        static void Opçao2_ComList()
+        static void Option2_ComList()
         {
             Console.WriteLine("");
             Console.WriteLine("1) Cooperativo");
@@ -176,6 +161,47 @@ namespace Sebo_nas_Canelas_3
             Console.WriteLine("7) RPG");
             Console.WriteLine("8) Card Game");
             Console.WriteLine("9) Outros");
+        }
+
+        static void Option3_ComList()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
+            Console.WriteLine("");
+            Console.WriteLine("Podemos ajudá-lo com algo mais?");
+            Console.WriteLine("1) Sim, por favor.");
+            Console.WriteLine("2) Não, obrigado.");
+            //opcao = Convert.ToInt32(Console.ReadLine());
+            //if (opcao == 1)
+            //{
+            //    opcaoInvalida = true;
+            //}
+            //else if (opcao == 2)
+            //{
+            //   opcaoInvalida = false;
+            //    Console.WriteLine("");
+            //    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
+            //}
+        }
+
+        static void Option4_ComList()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
+            Console.WriteLine("");
+            Console.WriteLine("Podemos ajudá-lo com algo mais?");
+            Console.WriteLine("1) Sim, por favor.");
+            Console.WriteLine("2) Não, obrigado.");
+        }
+
+        static void Option5_ComList()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
+            Console.WriteLine("");
+            Console.WriteLine("Podemos ajudá-lo com algo mais?");
+            Console.WriteLine("1) Sim, por favor.");
+            Console.WriteLine("2) Não, obrigado.");
         }
 
         static void Header ()
