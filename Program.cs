@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sebo_nas_Canelas_3.AppObjects;
 
 namespace Sebo_nas_Canelas_3
 {
@@ -7,6 +8,7 @@ namespace Sebo_nas_Canelas_3
     {
         static void Main(string[] args)
         {
+            
 
 
             bool opcaoInvalida = false;
@@ -22,9 +24,9 @@ namespace Sebo_nas_Canelas_3
 
                 Console.WriteLine("1) Consultar estilos literários.");
                 Console.WriteLine("2) Consultar tipos de jogos.");
-                Console.WriteLine("3) Consultar nome de livro.");
-                Console.WriteLine("4) Consultar nome de jogo.");
-                Console.WriteLine("5) Consultar estoque.");
+                Console.WriteLine("3) Listar livros.");
+                Console.WriteLine("4) Listar jogos.");
+                Console.WriteLine("5) Listar revistas.");
                 Console.WriteLine("6) Sair.");
                 int opcao = Convert.ToInt32(Console.ReadLine());
 
@@ -34,20 +36,20 @@ namespace Sebo_nas_Canelas_3
                 if (opcao == 1)
                 {
                     Header();
-                    Option1_ComList();
+                    Option1();
                     
                 }
 
                 else if (opcao == 2)
                 {
                     Header();
-                    Option2_ComList();
+                    Option2();
                 }
 
                 else if (opcao == 3)
                 {
                     Header();
-                    Option3_ComList();                    
+                    Option3();                    
                     opcao = Convert.ToInt32(Console.ReadLine());
                     if (opcao == 1)
                     {
@@ -63,23 +65,23 @@ namespace Sebo_nas_Canelas_3
                 else if (opcao == 4)
                 {
                     Header();
-                    Option4_ComList();                    
-                    opcao = Convert.ToInt32(Console.ReadLine());
-                    if (opcao == 1)
-                    {
-                        opcaoInvalida = true;
-                    }
-                    else if (opcao == 2)
-                    {
-                        opcaoInvalida = false;
-                        Console.WriteLine("");
-                        Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-                    }
+                    Option4();                    
+                    //opcao = Convert.ToInt32(Console.ReadLine());
+                    //if (opcao == 1)
+                    //{
+                    //    opcaoInvalida = true;
+                    //}
+                    //else if (opcao == 2)
+                    //{
+                    //    opcaoInvalida = false;
+                    //    Console.WriteLine("");
+                    //    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
+                    //}
                 }
                 else if (opcao == 5)
                 {
                     Header();
-                    Option5_ComList();                    
+                    Option5();                    
                     opcao = Convert.ToInt32(Console.ReadLine());
                     if (opcao == 1)
                     {
@@ -107,7 +109,7 @@ namespace Sebo_nas_Canelas_3
 
         }
 
-        static void Option1_ComList()
+        static void Option1()
         {
             Console.WriteLine("");
             Console.WriteLine("1)Biografia");
@@ -149,7 +151,7 @@ namespace Sebo_nas_Canelas_3
             }
         }
 
-        static void Option2_ComList()
+        static void Option2()
         {
             Console.WriteLine("");
             Console.WriteLine("1) Cooperativo");
@@ -163,41 +165,50 @@ namespace Sebo_nas_Canelas_3
             Console.WriteLine("9) Outros");
         }
 
-        static void Option3_ComList()
+        static void Option3()
         {
             Console.WriteLine("");
-            Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
+
+            List<Book> books = Book.GetBooks();
+            foreach (Book book in books)
+            { 
+                Console.WriteLine(book.Title); 
+            }
+            //Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
             Console.WriteLine("");
             Console.WriteLine("Podemos ajudá-lo com algo mais?");
             Console.WriteLine("1) Sim, por favor.");
             Console.WriteLine("2) Não, obrigado.");
-            //opcao = Convert.ToInt32(Console.ReadLine());
-            //if (opcao == 1)
-            //{
-            //    opcaoInvalida = true;
-            //}
-            //else if (opcao == 2)
-            //{
-            //   opcaoInvalida = false;
-            //    Console.WriteLine("");
-            //    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-            //}
+            
         }
 
-        static void Option4_ComList()
+        static void Option4()
         {
             Console.WriteLine("");
-            Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
-            Console.WriteLine("");
-            Console.WriteLine("Podemos ajudá-lo com algo mais?");
-            Console.WriteLine("1) Sim, por favor.");
-            Console.WriteLine("2) Não, obrigado.");
+
+            List<Game> games = Game.GetGames();
+            foreach (Game game in games)
+            {
+                Console.WriteLine(game.Title);
+            }
+
+            //Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
+            //Console.WriteLine("");
+            //Console.WriteLine("Podemos ajudá-lo com algo mais?");
+            //Console.WriteLine("1) Sim, por favor.");
+            //Console.WriteLine("2) Não, obrigado.");
         }
 
-        static void Option5_ComList()
+        static void Option5()
         {
             Console.WriteLine("");
-            Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
+
+            List<Magazine> magazines = Magazine.GetMagazines();
+            foreach (Magazine magazine in magazines)
+            {
+                Console.WriteLine(magazine.Title);
+            }
+            //Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
             Console.WriteLine("");
             Console.WriteLine("Podemos ajudá-lo com algo mais?");
             Console.WriteLine("1) Sim, por favor.");
