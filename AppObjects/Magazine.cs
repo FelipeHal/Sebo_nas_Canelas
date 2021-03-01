@@ -30,6 +30,13 @@ namespace Sebo_nas_Canelas_3.AppObjects
                 Publisher = "Panini",
                 Price = 30
             });
+            revistas.Add(new Magazine()
+            {
+                ID = 303,
+                Title = "Scientific American Brasil",
+                Publisher = "Editora Dueto",
+                Price = 15
+            });
 
             return revistas;
         }
