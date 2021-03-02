@@ -70,8 +70,8 @@ namespace Sebo_nas_Canelas_3.Menus.Books
             Console.WriteLine("You are at: > Books > List all books");
             Console.WriteLine("");
 
-            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║ BOOKS LIST                                                                                                  ║");
+            Console.WriteLine($"╔{new string('═', 109)}╗");
+            Console.WriteLine($"║ BOOKS LIST{new string(' ', 98)}║");
             Console.WriteLine($"╠═{new string('═', 3)}═╦═{new string('═', 20)}═╦═{new string('═', 40)}═╦═{new string('═', 10)}═╦═{new string('═', 10)}═╦═{new string('═', 9)}═╣");
             Console.WriteLine($"║ {"ID",-3} ║ {"Category",-20} ║ {"Title",-40} ║ {"Publisher",-10} ║ {"Stock qty.",-10} ║ {"Price",-9} ║");
             Console.WriteLine($"╠═{new string('═', 3)}═╬═{new string('═', 20)}═╬═{new string('═', 40)}═╬═{new string('═', 10)}═╬═{new string('═', 10)}═╬═{new string('═', 9)}═╣");

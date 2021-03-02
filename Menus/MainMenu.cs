@@ -21,6 +21,7 @@ namespace Sebo_nas_Canelas_3.Menus
 
         public static void Show()
         {
+            int opcao = 0;
             bool opcaoInvalida = false;
             do
             {
@@ -34,72 +35,83 @@ namespace Sebo_nas_Canelas_3.Menus
                 Console.WriteLine("4) Listar jogos.");
                 Console.WriteLine("5) Listar revistas.");
                 Console.WriteLine("6) Sair.");
-                int opcao = Convert.ToInt32(Console.ReadLine());
+                opcao = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("");
                 Console.WriteLine($"Você selecionou a opção {opcao}.");
 
-                if (opcao == 1)
-                {
-                    Header();
-                    Option1();
+                opcaoInvalida = false;
+
+                switch (opcao)
+                { 
+                    case 1:
+                        Header();
+                        Option1();
+                        break;
+
+                    case 2:
+                        Header();
+                        Option2();
+                        break;
+
+                    case 3:
+                        BooksMenu.Show();
+                        break;
+
+                    case 4:
+                        GamesMenu.Show();
+                        break;
+
+                    case 5:
+                        MagazinesMenu.Show();
+                        break;
+
+                    case 6:
+                        Console.WriteLine("");
+                        Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
+                        break;
+                    default:
+                        opcaoInvalida = true;
+                        break;
 
                 }
+                //if (opcao == 1)
+                //{
+                //    Header();
+                //    Option1();
+                //
+                //}
 
-                else if (opcao == 2)
-                {
-                    Header();
-                    Option2();
-                }
+                //else if (opcao == 2)
+                //{
+                //    Header();
+                //    Option2();
+                //}
 
-                else if (opcao == 3)
-                {
-                    BooksMenu.Show();
-                    //Header();
-                    //Option3();
-                    //opcao = Convert.ToInt32(Console.ReadLine());
-                    //if (opcao == 1)
-                    //{
-                    //    opcaoInvalida = true;
-                    //}
-                    //else if (opcao == 2)
-                    //{
-                    //    opcaoInvalida = false;
-                    //    Console.WriteLine("");
-                    //    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-                    //}
-                }
-                else if (opcao == 4)
-                {
-                    GamesMenu.Show();
-                }
-                else if (opcao == 5)
-                {
-                    MagazinesMenu.Show();
-                    //Header();
-                    //Option5();
-                    //opcao = Convert.ToInt32(Console.ReadLine());
-                    //if (opcao == 1)
-                    //{
-                    //    opcaoInvalida = true;
-                    //}
-                    //else if (opcao == 2)
-                    //{
-                    //    opcaoInvalida = false;
-                    //    Console.WriteLine("");
-                    //    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-                    //}
-                }
-                else if (opcao == 6)
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-                }
-                else
-                { opcaoInvalida = true; }
+                //else if (opcao == 3)
+                //{
+                //    BooksMenu.Show();
+                
+                //}
+                //else if (opcao == 4)
+                //{
+                //    GamesMenu.Show();
+                //}
+                //else if (opcao == 5)
+                //{
+                //    MagazinesMenu.Show();
+                    
+                //}
+                //else if (opcao == 6)
+                //{
+                //    Console.WriteLine("");
+                //    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
+                //}
+                //else
+                //{ opcaoInvalida = true; }
             }
 
-            while (opcaoInvalida);
+            while (opcao < 1 || opcao > 6);
 
 
 
@@ -162,40 +174,6 @@ namespace Sebo_nas_Canelas_3.Menus
             Console.WriteLine("8) Card Game");
             Console.WriteLine("9) Outros");
         }
-
-        //static void Option3()
-        //{
-        //    Console.WriteLine("");
-        //
-        //   List<Book> books = Book.GetBooks();
-        //    foreach (Book book in books)
-        //    {
-        //        Console.WriteLine(book.Title);
-        //    }
-        //    
-        //    Console.WriteLine("");
-        //    Console.WriteLine("Podemos ajudá-lo com algo mais?");
-        //    Console.WriteLine("1) Sim, por favor.");
-        //    Console.WriteLine("2) Não, obrigado.");
-        //
-        //}
-
-        //static void Option5()
-        //{
-        //    Console.WriteLine("");
-        //
-        //    List<Magazine> magazines = Magazine.GetMagazines();
-        //    foreach (Magazine magazine in magazines)
-        //    {
-        //        Console.WriteLine(magazine.Title);
-        //    }
-        //    
-        //    Console.WriteLine("");
-        //    Console.WriteLine("Podemos ajudá-lo com algo mais?");
-        //    Console.WriteLine("1) Sim, por favor.");
-        //    Console.WriteLine("2) Não, obrigado.");
-        //}
-
         static void Header()
         {
             Console.Clear();

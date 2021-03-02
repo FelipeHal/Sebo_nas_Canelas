@@ -38,7 +38,7 @@ namespace Sebo_nas_Canelas_3.Repositories
                 {
                     ID = 303,
                     Title = "Scientific American Brasil",
-                    Publisher = "Editora Dueto",
+                    Publisher = "Dueto",
                     Price = 15m
                 });
             }

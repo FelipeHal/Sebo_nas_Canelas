@@ -15,7 +15,7 @@ namespace Sebo_nas_Canelas_3.Repositories
                 _data.Add(new Book()
                 {
                     ID = 101,
-                    Title = "O Olho do Mundo: (Série A roda do tempo vol. 1)",
+                    Title = "O Olho do Mundo: (A roda do tempo # 1)",
                     Author = "Robert Jordan",
                     Publisher = "Intrínseca",
                     Price = 36m
@@ -52,7 +52,7 @@ namespace Sebo_nas_Canelas_3.Repositories
                     ID = 104,
                     Title = "A Espada dos Reis",
                     Author = "Bernard Cornwell",
-                    Publisher = "Editora Record",
+                    Publisher = "Record",
                     Price = 44m
                 });
             }

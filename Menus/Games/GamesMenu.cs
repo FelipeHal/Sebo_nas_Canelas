@@ -70,8 +70,8 @@ namespace Sebo_nas_Canelas_3.Menus.Games
             Console.WriteLine("You are at: > Games > List all games");
             Console.WriteLine("");
 
-            Console.WriteLine("╔═════════════════════════════════════════════════════════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║ GAMES LIST                                                                                                  ║");
+            Console.WriteLine($"╔{new string('═', 109)}╗");
+            Console.WriteLine($"║ GAMES LIST{new string(' ', 98)}║");
             Console.WriteLine($"╠═{new string('═', 3)}═╦═{new string('═', 20)}═╦═{new string('═', 40)}═╦═{new string('═', 10)}═╦═{new string('═', 10)}═╦═{new string('═', 9)}═╣");
             Console.WriteLine($"║ {"ID",-3} ║ {"Category",-20} ║ {"Title",-40} ║ {"Console",-10} ║ {"Stock qty.",-10} ║ {"Price",-9} ║");
             Console.WriteLine($"╠═{new string('═', 3)}═╬═{new string('═', 20)}═╬═{new string('═', 40)}═╬═{new string('═', 10)}═╬═{new string('═', 10)}═╬═{new string('═', 9)}═╣");
