@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Menus\NewFolder\**" />
+    <EmbeddedResource Remove="Menus\NewFolder\**" />
+    <None Remove="Menus\NewFolder\**" />
+  </ItemGroup>
+
 </Project>

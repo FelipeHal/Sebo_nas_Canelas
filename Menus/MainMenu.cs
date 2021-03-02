@@ -1,5 +1,7 @@
 ﻿using Sebo_nas_Canelas_3.AppObjects;
+using Sebo_nas_Canelas_3.Menus.Books;
 using Sebo_nas_Canelas_3.Menus.Games;
+using Sebo_nas_Canelas_3.Menus.Magazines;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -52,19 +54,20 @@ namespace Sebo_nas_Canelas_3.Menus
 
                 else if (opcao == 3)
                 {
-                    Header();
-                    Option3();
-                    opcao = Convert.ToInt32(Console.ReadLine());
-                    if (opcao == 1)
-                    {
-                        opcaoInvalida = true;
-                    }
-                    else if (opcao == 2)
-                    {
-                        opcaoInvalida = false;
-                        Console.WriteLine("");
-                        Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-                    }
+                    BooksMenu.Show();
+                    //Header();
+                    //Option3();
+                    //opcao = Convert.ToInt32(Console.ReadLine());
+                    //if (opcao == 1)
+                    //{
+                    //    opcaoInvalida = true;
+                    //}
+                    //else if (opcao == 2)
+                    //{
+                    //    opcaoInvalida = false;
+                    //    Console.WriteLine("");
+                    //    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
+                    //}
                 }
                 else if (opcao == 4)
                 {
@@ -72,19 +75,20 @@ namespace Sebo_nas_Canelas_3.Menus
                 }
                 else if (opcao == 5)
                 {
-                    Header();
-                    Option5();
-                    opcao = Convert.ToInt32(Console.ReadLine());
-                    if (opcao == 1)
-                    {
-                        opcaoInvalida = true;
-                    }
-                    else if (opcao == 2)
-                    {
-                        opcaoInvalida = false;
-                        Console.WriteLine("");
-                        Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-                    }
+                    MagazinesMenu.Show();
+                    //Header();
+                    //Option5();
+                    //opcao = Convert.ToInt32(Console.ReadLine());
+                    //if (opcao == 1)
+                    //{
+                    //    opcaoInvalida = true;
+                    //}
+                    //else if (opcao == 2)
+                    //{
+                    //    opcaoInvalida = false;
+                    //    Console.WriteLine("");
+                    //    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
+                    //}
                 }
                 else if (opcao == 6)
                 {
@@ -159,38 +163,38 @@ namespace Sebo_nas_Canelas_3.Menus
             Console.WriteLine("9) Outros");
         }
 
-        static void Option3()
-        {
-            Console.WriteLine("");
+        //static void Option3()
+        //{
+        //    Console.WriteLine("");
+        //
+        //   List<Book> books = Book.GetBooks();
+        //    foreach (Book book in books)
+        //    {
+        //        Console.WriteLine(book.Title);
+        //    }
+        //    
+        //    Console.WriteLine("");
+        //    Console.WriteLine("Podemos ajudá-lo com algo mais?");
+        //    Console.WriteLine("1) Sim, por favor.");
+        //    Console.WriteLine("2) Não, obrigado.");
+        //
+        //}
 
-            List<Book> books = Book.GetBooks();
-            foreach (Book book in books)
-            {
-                Console.WriteLine(book.Title);
-            }
-            //Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
-            Console.WriteLine("");
-            Console.WriteLine("Podemos ajudá-lo com algo mais?");
-            Console.WriteLine("1) Sim, por favor.");
-            Console.WriteLine("2) Não, obrigado.");
-
-        }
-
-        static void Option5()
-        {
-            Console.WriteLine("");
-
-            List<Magazine> magazines = Magazine.GetMagazines();
-            foreach (Magazine magazine in magazines)
-            {
-                Console.WriteLine(magazine.Title);
-            }
-            //Console.WriteLine("Atualização manual dos registros em andamento. Dados indisponíveis no momento.");
-            Console.WriteLine("");
-            Console.WriteLine("Podemos ajudá-lo com algo mais?");
-            Console.WriteLine("1) Sim, por favor.");
-            Console.WriteLine("2) Não, obrigado.");
-        }
+        //static void Option5()
+        //{
+        //    Console.WriteLine("");
+        //
+        //    List<Magazine> magazines = Magazine.GetMagazines();
+        //    foreach (Magazine magazine in magazines)
+        //    {
+        //        Console.WriteLine(magazine.Title);
+        //    }
+        //    
+        //    Console.WriteLine("");
+        //    Console.WriteLine("Podemos ajudá-lo com algo mais?");
+        //    Console.WriteLine("1) Sim, por favor.");
+        //    Console.WriteLine("2) Não, obrigado.");
+        //}
 
         static void Header()
         {
