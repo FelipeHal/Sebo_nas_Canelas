@@ -29,6 +29,13 @@ namespace Sebo_nas_Canelas_3.Menus
                 Console.WriteLine("");
                 Console.WriteLine($"Olá, {Username}, o que gostaria de fazer?");
 
+                if (opcaoInvalida)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("!INVALID SELECTION!");
+                    Console.WriteLine("");
+                }
+
                 Console.WriteLine("1) Consultar estilos literários.");
                 Console.WriteLine("2) Consultar tipos de jogos.");
                 Console.WriteLine("3) Listar livros.");
