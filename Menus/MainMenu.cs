@@ -27,7 +27,7 @@ namespace Sebo_nas_Canelas_3.Menus
             {
                 Header();
                 Console.WriteLine("");
-                Console.WriteLine($"Olá, {Username}, o que gostaria de fazer?");
+                Console.WriteLine($"Olá, o que gostaria de fazer?");
 
                 if (opcaoInvalida)
                 {
