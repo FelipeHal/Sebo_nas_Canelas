@@ -118,7 +118,7 @@ namespace Sebo_nas_Canelas_3.Menus
                 //{ opcaoInvalida = true; }
             }
 
-            while (opcao < 1 || opcao > 6);
+            while (opcao != 6);
 
 
 
