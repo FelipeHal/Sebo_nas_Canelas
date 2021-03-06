@@ -1,4 +1,5 @@
-﻿using Sebo_nas_Canelas_3.Repositories;
+﻿using Sebo_nas_Canelas_3.AppObjects;
+using Sebo_nas_Canelas_3.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -53,14 +54,14 @@ namespace Sebo_nas_Canelas_3.Menus.Games
                         DeleteGame();
                         break;
                     case 0:
-                        MainMenu.Show();
+                        //MainMenu.Show();
                         break;
                     default:
                         invalidSelection = true;
                         break;
                 }
             }
-            while (selection < 1 || selection > 4);
+            while (selection != 0);
         }
 
 
@@ -86,12 +87,34 @@ namespace Sebo_nas_Canelas_3.Menus.Games
             Console.WriteLine("");
             Console.WriteLine("Press any key to return to games main menu...");
             Console.ReadKey();
-            Show();
+
+            //Show();
         }
 
         public static void AddGame()
         {
+            HeaderMenu.Show();
+            Console.WriteLine("You are at: > Games > New game");
+            Console.WriteLine("");
 
+            Game game = new Game();
+
+            Console.WriteLine("Input product title: ");
+            game.Title = Console.ReadLine();
+
+            Console.Write("Input product price: ");
+            game.Price = Convert.ToDecimal(Console.ReadLine());
+
+            GamesRepository.Insert(game);
+
+            Console.WriteLine("");
+            Console.WriteLine("Product inserted successfully!");
+
+            Console.WriteLine("");
+            Console.WriteLine("Press any key to return to games main menu...");
+            Console.ReadKey();
+
+            //Show();
         }
 
         public static void UpdateGame()
