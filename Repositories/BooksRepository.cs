@@ -1,6 +1,9 @@
 ﻿using Sebo_nas_Canelas_3.AppObjects;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using Sebo_nas_Canelas_3.Menus.Books;
+using System;
 
 namespace Sebo_nas_Canelas_3.Repositories
 {
@@ -76,9 +79,15 @@ namespace Sebo_nas_Canelas_3.Repositories
             return _data;
         }
 
+        public static Book Find(int id)
+        {
+            return _data.FirstOrDefault(x => x.ID == id);
+        }
+
         public static void Insert(Book book)
         {
             _data.Add(book);
+                       
         }
 
         public static void Update(Book book)

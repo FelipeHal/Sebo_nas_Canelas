@@ -9,11 +9,8 @@ namespace Sebo_nas_Canelas_3
         {
             HeaderMenu.Show();
 
-            Console.WriteLine("Seja bem vindo! Digite o nome de usuário:");
-            
-            string name = Convert.ToString(Console.ReadLine());
-            MainMenu.SetUsername(name);
-
+            Console.WriteLine("Seja bem vindo!");            
+          
             MainMenu.Show();
         }
     }

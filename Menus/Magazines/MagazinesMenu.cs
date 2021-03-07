@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Sebo_nas_Canelas_3.AppObjects;
 
 namespace Sebo_nas_Canelas_3.Menus.Magazines
 {
@@ -91,6 +92,29 @@ namespace Sebo_nas_Canelas_3.Menus.Magazines
 
         public static void AddMagazine()
         {
+            HeaderMenu.Show();
+            Console.WriteLine("You are at: > Magazines > Add new Magazine.");
+            Console.WriteLine("");
+
+            Magazine magazine = new Magazine();
+
+            Console.Write("Insert magazine title:");
+            magazine.Title = Console.ReadLine();
+
+            Console.Write("Insert magazine price:");
+            magazine.Price = Convert.ToDecimal(Console.ReadLine());
+
+            MagazinesRepository.Insert(magazine);
+            Console.WriteLine("");
+
+            Console.WriteLine("Magazine inserted successfully!");
+            Console.WriteLine("");
+
+            Console.WriteLine("Press any key to return.");
+            Console.ReadKey();
+
+
+
 
         }
 

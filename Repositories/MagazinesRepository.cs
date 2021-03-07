@@ -51,6 +51,11 @@ namespace Sebo_nas_Canelas_3.Repositories
             return _data;
         }
 
+        public static Magazine Find(int id)
+        {
+            return _data.FirstOrDefault(x => x.ID == id);
+        }
+
         public static void Insert(Magazine magazine)
         {
             _data.Add(magazine);

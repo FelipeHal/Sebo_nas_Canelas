@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Sebo_nas_Canelas_3.AppObjects;
 
 namespace Sebo_nas_Canelas_3.Menus.Books
 {
@@ -91,11 +92,45 @@ namespace Sebo_nas_Canelas_3.Menus.Books
 
         public static void AddBook()
         {
+            HeaderMenu.Show();
+            Console.WriteLine("You are at: > Books > Add new book.");
+            Console.WriteLine("");
+
+            Book book = new Book();
+
+                
+            Console.WriteLine("Type the title of the book you want to add.");
+            book.Title = Console.ReadLine();
+            
+                        
+            Console.WriteLine("Type the price of the book you want to add.");
+            book.Price = Convert.ToDecimal(Console.ReadLine());
+
+            BooksRepository.Insert(book);
+
+            Console.WriteLine("");
+            Console.WriteLine("Book inserted successfully!");
+            Console.WriteLine("");
+
+            Console.WriteLine("Press any key to return.");
+            Console.ReadKey();
+
+
 
         }
 
         public static void UpdateBook()
         {
+
+            Book book = BooksRepository.Find(50000);
+            if (book != null)
+            {
+                //Update book
+            }
+            else
+            {
+                //Invalid ID, show error
+            }
 
         }
 
