@@ -121,11 +121,40 @@ namespace Sebo_nas_Canelas_3.Menus.Books
 
         public static void UpdateBook()
         {
+            HeaderMenu.Show();
+            Console.WriteLine("You are at: > Books > Update book.");
+            Console.WriteLine("");
+
+            
+            Console.WriteLine("Type the ID of the book you want to update.");
+            //int id = Convert.ToInt32(Console.ReadLine());
+            //BooksRepository.List.Find(x => x.ID == book);
+
 
             Book book = BooksRepository.Find(50000);
+
             if (book != null)
             {
-                //Update book
+                Console.WriteLine($"Você selecionou: {book.Title}");
+
+                book = new Book();
+
+                Console.WriteLine("Type the new title of the book you want to update.");
+                book.Title = Console.ReadLine();
+                //book.Title = new Book.Title;
+
+
+                Console.WriteLine("Type the new price of the book you want to update.");
+                book.Price = Convert.ToDecimal(Console.ReadLine());
+
+                BooksRepository.Update(book);
+
+                Console.WriteLine("");
+                Console.WriteLine("Book updated successfully!");
+                Console.WriteLine("");
+
+                Console.WriteLine("Press any key to return.");
+                Console.ReadKey();
             }
             else
             {
