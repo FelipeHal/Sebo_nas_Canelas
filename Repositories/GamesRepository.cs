@@ -53,7 +53,12 @@ namespace Sebo_nas_Canelas_3.Repositories
             LoadData();
             return _data;
         }
-
+        
+        public static Game Find(int id)
+        {
+            LoadData();
+            return _data.FirstOrDefault(x => x.ID == id);
+        }
         public static void Insert(Game game)
         {
             _data.Add(game);

@@ -119,7 +119,44 @@ namespace Sebo_nas_Canelas_3.Menus.Games
 
         public static void UpdateGame()
         {
+            HeaderMenu.Show();
+            Console.WriteLine("You are at: > Games > Update games.");
+            Console.WriteLine("");
 
+            Console.Write("Type the ID of the game you want to update:");
+            int id = Convert.ToInt32(Console.ReadLine());
+            Game game = GamesRepository.Find(id);
+
+            if (game != null)
+            {              
+                Console.WriteLine($"You have selected: {game.Title}");
+                Console.WriteLine("");
+
+                Console.Write("Type the new title of the game you want to update:");
+                game.Title = Console.ReadLine();
+                Console.WriteLine("");
+
+                Console.Write("Type the new price of the game you want to update:");
+                game.Price = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("");
+
+                GamesRepository.Update(game);
+
+                Console.WriteLine("");
+                Console.WriteLine("Game updated successfully!");
+                Console.WriteLine("");
+
+                Console.WriteLine("Press any key to return.");
+                Console.ReadKey();
+
+            }
+            else
+            {
+                Console.WriteLine("Error. Invalid ID.");
+                Console.WriteLine("Press any key to return.");
+                Console.ReadKey();
+                return;
+            }
         }
 
         public static void DeleteGame()

@@ -58,6 +58,7 @@ namespace Sebo_nas_Canelas_3.Repositories
 
         public static void Insert(Magazine magazine)
         {
+            LoadData();
             _data.Add(magazine);
         }
 

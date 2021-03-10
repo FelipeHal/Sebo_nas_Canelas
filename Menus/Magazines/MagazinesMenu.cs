@@ -120,6 +120,43 @@ namespace Sebo_nas_Canelas_3.Menus.Magazines
 
         public static void UpdateMagazine()
         {
+            HeaderMenu.Show();
+            Console.WriteLine("You are at: > Magazines > Update magazines.");
+            Console.WriteLine("");
+
+            Console.Write("Type the ID of the magazine you want to update:");
+            int id = Convert.ToInt32(Console.ReadLine());
+            Magazine magazine = MagazinesRepository.Find(id);
+
+            if (magazine != null)
+            {
+                Console.WriteLine($"You have selected: {magazine.Title}");
+                Console.WriteLine("");
+
+                Console.Write("Type the new title of the magazine you want to update:");
+                magazine.Title = Console.ReadLine();
+                Console.WriteLine("");
+
+                Console.Write("Type the new price of the magazine you want to update:");
+                magazine.Price = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("");
+
+                MagazinesRepository.Update(magazine);
+
+                Console.WriteLine("");
+                Console.WriteLine("Book updated successfully!");
+                Console.WriteLine("");
+
+                Console.WriteLine("Press any key to return.");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("Error. Invalid ID.");
+                Console.WriteLine("Press any key to return.");
+                Console.ReadKey();
+                return;
+            }
 
         }
 
