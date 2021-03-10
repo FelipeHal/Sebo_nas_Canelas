@@ -82,40 +82,7 @@ namespace Sebo_nas_Canelas_3.Menus
                         break;
 
                 }
-                //if (opcao == 1)
-                //{
-                //    Header();
-                //    Option1();
-                //
-                //}
-
-                //else if (opcao == 2)
-                //{
-                //    Header();
-                //    Option2();
-                //}
-
-                //else if (opcao == 3)
-                //{
-                //    BooksMenu.Show();
-                
-                //}
-                //else if (opcao == 4)
-                //{
-                //    GamesMenu.Show();
-                //}
-                //else if (opcao == 5)
-                //{
-                //    MagazinesMenu.Show();
-                    
-                //}
-                //else if (opcao == 6)
-                //{
-                //    Console.WriteLine("");
-                //    Console.WriteLine("Esperamos que tenha conseguido realizar seu atendimento. Obrigado e volte sempre!");
-                //}
-                //else
-                //{ opcaoInvalida = true; }
+               
             }
 
             while (opcao != 6);

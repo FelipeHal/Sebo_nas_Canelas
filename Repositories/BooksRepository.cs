@@ -81,6 +81,7 @@ namespace Sebo_nas_Canelas_3.Repositories
 
         public static Book Find(int id)
         {
+            LoadData();
             return _data.FirstOrDefault(x => x.ID == id);
         }
 
