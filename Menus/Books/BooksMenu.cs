@@ -125,16 +125,18 @@ namespace Sebo_nas_Canelas_3.Menus.Books
             Console.WriteLine("You are at: > Books > Update book.");
             Console.WriteLine("");
 
+
             
             Console.WriteLine("Type the ID of the book you want to update.");
-            //int id = Convert.ToInt32(Console.ReadLine());
-            //BooksRepository.List.Find(x => x.ID == book);
-
-
-            Book book = BooksRepository.Find(50000);
+            int id = Convert.ToInt32(Console.ReadLine());
+            Book book = BooksRepository.Find(id);
+            //return book.Find(x => x.ID == id);
+            book.Title = Console.ReadLine();
+            BooksRepository.Update(book);
 
             if (book != null)
             {
+                //return book.Find(x => x.ID == id);
                 Console.WriteLine($"Você selecionou: {book.Title}");
 
                 book = new Book();
