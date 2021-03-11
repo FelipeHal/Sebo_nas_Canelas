@@ -144,7 +144,7 @@ namespace Sebo_nas_Canelas_3.Menus.Magazines
                 MagazinesRepository.Update(magazine);
 
                 Console.WriteLine("");
-                Console.WriteLine("Book updated successfully!");
+                Console.WriteLine("Magazine updated successfully!");
                 Console.WriteLine("");
 
                 Console.WriteLine("Press any key to return.");
@@ -162,7 +162,7 @@ namespace Sebo_nas_Canelas_3.Menus.Magazines
 
         public static void DeleteMagazine()
         {
-
+           
         }
     }
 }
