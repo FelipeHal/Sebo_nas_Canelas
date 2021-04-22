@@ -54,14 +54,14 @@ namespace Sebo_nas_Canelas_3.Menus.Books
                         DeleteBook();
                         break;
                     case 0:
-                        MainMenu.Show();
+                        //MainMenu.Show();
                         break;
                     default:
                         invalidSelection = true;
                         break;
                 }
             }
-            while (selection < 1 || selection > 4);
+            while (selection != 0);
         }
 
 

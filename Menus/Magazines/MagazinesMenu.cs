@@ -54,14 +54,14 @@ namespace Sebo_nas_Canelas_3.Menus.Magazines
                         DeleteMagazine();
                         break;
                     case 0:
-                        MainMenu.Show();
+                        //MainMenu.Show();
                         break;
                     default:
                         invalidSelection = true;
                         break;
                 }
             }
-            while (selection < 1 || selection > 4);
+            while (selection != 0);
         }
 
 
@@ -105,11 +105,11 @@ namespace Sebo_nas_Canelas_3.Menus.Magazines
             magazine.Price = Convert.ToDecimal(Console.ReadLine());
 
             MagazinesRepository.Insert(magazine);
-            Console.WriteLine("");
 
+            Console.WriteLine("");
             Console.WriteLine("Magazine inserted successfully!");
-            Console.WriteLine("");
 
+            Console.WriteLine("");
             Console.WriteLine("Press any key to return.");
             Console.ReadKey();
 

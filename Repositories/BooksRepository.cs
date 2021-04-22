@@ -1,9 +1,6 @@
 ﻿using Sebo_nas_Canelas_3.AppObjects;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Sebo_nas_Canelas_3.Menus.Books;
-using System;
 
 namespace Sebo_nas_Canelas_3.Repositories
 {
