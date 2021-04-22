@@ -137,7 +137,7 @@ namespace Sebo_nas_Canelas_3.Menus.Games
                 Console.WriteLine("");
 
                 Console.Write("Type the new price of the game you want to update:");
-                game.Price = Convert.ToInt32(Console.ReadLine());
+                game.Price = Convert.ToDecimal(Console.ReadLine());
                 Console.WriteLine("");
 
                 GamesRepository.Update(game);
