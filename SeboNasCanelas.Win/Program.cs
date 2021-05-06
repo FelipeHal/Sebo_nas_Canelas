@@ -1,4 +1,4 @@
-using SeboNasCanelas.Win.Forms.Books;
+using SeboNasCanelas.Win.Forms.Games;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,7 @@ namespace SeboNasCanelas.Win
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmListBooks());
+            Application.Run(new frmListGames());
         }
     }
 }

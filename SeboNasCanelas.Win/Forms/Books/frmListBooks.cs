@@ -40,5 +40,10 @@ namespace SeboNasCanelas.Win.Forms.Books
             Book selectedbook = (Book)dgvData.SelectedRows[0].DataBoundItem;
             MessageBox.Show(selectedbook.ID.ToString());
         }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
