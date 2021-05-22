@@ -39,6 +39,15 @@ namespace SeboNasCanelas.Win.Forms
         private void mnuGames_Click(object sender, EventArgs e)
         {
             frmListGames games = new frmListGames();
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is frmListGames)
+                {
+                    return;
+                }
+            }
+
             games.MdiParent = this;
             games.Show();
         }
@@ -46,6 +55,15 @@ namespace SeboNasCanelas.Win.Forms
         private void mnuMagazines_Click(object sender, EventArgs e)
         {
             frmListMagazines magazines = new frmListMagazines();
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is frmListMagazines)
+                {
+                    return;
+                }
+            }
+
             magazines.MdiParent = this;
             magazines.Show();
         }
