@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeboNasCanelas.Win.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace SeboNasCanelas.Win.Forms.Magazines
 {
     public partial class frmListMagazines : Form
     {
+        private readonly MagazinesRepository magazinesRepository;
+
         public frmListMagazines()
         {
             InitializeComponent();
+            magazinesRepository = new MagazinesRepository();
+        }
+
+        private void frmListMagazines_Load(object sender, EventArgs e)
+        {
+            dgvData.AutoGenerateColumns = false;
+            dgvData.DataSource = magazinesRepository.List();
         }
     }
 }

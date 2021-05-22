@@ -32,8 +32,8 @@ namespace SeboNasCanelas.Win.Forms.Games
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,8 +59,8 @@ namespace SeboNasCanelas.Win.Forms.Games
             // 
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Title,
-            this.ID});
+            this.colTitle,
+            this.colID});
             this.dgvData.Location = new System.Drawing.Point(12, 54);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowTemplate.Height = 25;
@@ -68,15 +68,17 @@ namespace SeboNasCanelas.Win.Forms.Games
             this.dgvData.TabIndex = 2;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Title
+            // colTitle
             // 
-            this.Title.HeaderText = "Title";
-            this.Title.Name = "Title";
+            this.colTitle.DataPropertyName = "Title";
+            this.colTitle.HeaderText = "Title";
+            this.colTitle.Name = "colTitle";
             // 
-            // ID
+            // colID
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
+            this.colID.DataPropertyName = "ID";
+            this.colID.HeaderText = "ID";
+            this.colID.Name = "colID";
             // 
             // frmListGames
             // 
@@ -88,6 +90,7 @@ namespace SeboNasCanelas.Win.Forms.Games
             this.Controls.Add(this.label1);
             this.Name = "frmListGames";
             this.Text = "Games List";
+            this.Load += new System.EventHandler(this.frmList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
 
@@ -98,7 +101,7 @@ namespace SeboNasCanelas.Win.Forms.Games
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
     }
 }
