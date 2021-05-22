@@ -23,6 +23,15 @@ namespace SeboNasCanelas.Win.Forms
         private void mnuBooks_Click(object sender, EventArgs e)
         {
             frmListBooks books = new frmListBooks();
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is frmListBooks)
+                {
+                    return;
+                }
+            }
+
             books.MdiParent = this;
             books.Show();
         }
