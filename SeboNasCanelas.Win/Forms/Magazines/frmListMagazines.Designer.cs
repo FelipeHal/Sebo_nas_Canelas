@@ -29,12 +29,15 @@ namespace SeboNasCanelas.Win.Forms.Magazines
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListMagazines));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,7 +64,7 @@ namespace SeboNasCanelas.Win.Forms.Magazines
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Title});
-            this.dgvData.Location = new System.Drawing.Point(12, 54);
+            this.dgvData.Location = new System.Drawing.Point(8, 54);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowTemplate.Height = 25;
             this.dgvData.Size = new System.Drawing.Size(780, 384);
@@ -79,18 +82,30 @@ namespace SeboNasCanelas.Win.Forms.Magazines
             this.Title.HeaderText = "Title";
             this.Title.Name = "Title";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SeboNasCanelas.Win.Properties.Resources.Mattahan_Ultrabuuf_Comics_Spiderman_Cam;
+            this.pictureBox1.Location = new System.Drawing.Point(266, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 35);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmListMagazines
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListMagazines";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmListMagazines_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -102,5 +117,6 @@ namespace SeboNasCanelas.Win.Forms.Magazines
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

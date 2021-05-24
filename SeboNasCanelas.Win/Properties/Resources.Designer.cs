@@ -79,5 +79,35 @@ namespace SeboNasCanelas.Win.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Itzikgur_My_Seven_Books_2 {
+            get {
+                object obj = ResourceManager.GetObject("Itzikgur-My-Seven-Books-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mattahan_Ultrabuuf_Comics_Spiderman_Cam {
+            get {
+                object obj = ResourceManager.GetObject("Mattahan-Ultrabuuf-Comics-Spiderman-Cam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Uriy1966_Steel_System_Games {
+            get {
+                object obj = ResourceManager.GetObject("Uriy1966-Steel-System-Games", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

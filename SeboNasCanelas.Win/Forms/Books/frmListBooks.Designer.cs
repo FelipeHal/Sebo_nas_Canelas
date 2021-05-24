@@ -29,7 +29,7 @@ namespace SeboNasCanelas.Win.Forms.Books
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListBooks));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -115,19 +115,20 @@ namespace SeboNasCanelas.Win.Forms.Books
             // 
             this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Price.DataPropertyName = "Price";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Price.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Price.DefaultCellStyle = dataGridViewCellStyle1;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.Width = 58;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(183, 12);
+            this.pictureBox1.Image = global::SeboNasCanelas.Win.Properties.Resources.Itzikgur_My_Seven_Books_2;
+            this.pictureBox1.Location = new System.Drawing.Point(260, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 37);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 

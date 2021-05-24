@@ -29,6 +29,7 @@ namespace SeboNasCanelas.Win.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.mnuMenuStrip = new System.Windows.Forms.MenuStrip();
             this.mnuBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGames = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +76,7 @@ namespace SeboNasCanelas.Win.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 381);
             this.Controls.Add(this.mnuMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuMenuStrip;
             this.MaximizeBox = false;
