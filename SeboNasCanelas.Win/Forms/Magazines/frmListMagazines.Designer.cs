@@ -64,6 +64,7 @@ namespace SeboNasCanelas.Win.Forms.Magazines
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Title});
+            this.dgvData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvData.Location = new System.Drawing.Point(8, 54);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowTemplate.Height = 25;

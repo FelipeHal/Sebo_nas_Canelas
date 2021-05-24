@@ -78,6 +78,7 @@ namespace SeboNasCanelas.Win.Forms.Books
             this.Category,
             this.Title,
             this.Price});
+            this.dgvData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvData.Location = new System.Drawing.Point(12, 54);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersVisible = false;
