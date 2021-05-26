@@ -20,52 +20,82 @@ namespace SeboNasCanelas.Win.Forms
             InitializeComponent();
         }
 
-        private void mnuBooks_Click(object sender, EventArgs e)
+        private void OpenForm(Form newForm)
         {
-            frmListBooks books = new frmListBooks();
-
             foreach (Form form in Application.OpenForms)
             {
-                if (form is frmListBooks)
+                if (form.GetType() == newForm.GetType())
                 {
                     return;
                 }
             }
 
-            books.MdiParent = this;
-            books.Show();
+            newForm.MdiParent = this;
+            newForm.Show();
+        }
+
+
+        private void mnuBooks_Click(object sender, EventArgs e)
+        {
+            
+            //frmListBooks books = new frmListBooks();
+
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form is frmListBooks)
+            //    {
+            //        return;
+            //    }
+            //}
+
+            //books.MdiParent = this;
+            //books.Show();
         }
 
         private void mnuGames_Click(object sender, EventArgs e)
         {
-            frmListGames games = new frmListGames();
+            OpenForm(new frmListGames());
+            //frmListGames games = new frmListGames();
 
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is frmListGames)
-                {
-                    return;
-                }
-            }
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form is frmListGames)
+            //    {
+            //        return;
+            //    }
+            //}
 
-            games.MdiParent = this;
-            games.Show();
+            //games.MdiParent = this;
+            //games.Show();
         }
 
         private void mnuMagazines_Click(object sender, EventArgs e)
         {
-            frmListMagazines magazines = new frmListMagazines();
+            OpenForm(new frmListMagazines());
+            //frmListMagazines magazines = new frmListMagazines();
 
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is frmListMagazines)
-                {
-                    return;
-                }
-            }
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form is frmListMagazines)
+            //    {
+            //        return;
+            //    }
+            //}
 
-            magazines.MdiParent = this;
-            magazines.Show();
+            //magazines.MdiParent = this;
+            //magazines.Show();
+        }
+
+        private void mnuListBooks_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmListBooks());
+        }
+
+        private void mnuNewBooks_Click(object sender, EventArgs e)
+        {
+            frmEditBooks editBooks = new frmEditBooks();
+            editBooks.newBook();
+            OpenForm(editBooks);
         }
     }
 }

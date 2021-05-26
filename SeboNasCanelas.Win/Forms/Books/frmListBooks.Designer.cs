@@ -126,10 +126,11 @@ namespace SeboNasCanelas.Win.Forms.Books
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SeboNasCanelas.Win.Properties.Resources.Itzikgur_My_Seven_Books_2;
+            this.pictureBox1.BackgroundImage = global::SeboNasCanelas.Win.Properties.Resources.Itzikgur_My_Seven_Books_2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(260, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
