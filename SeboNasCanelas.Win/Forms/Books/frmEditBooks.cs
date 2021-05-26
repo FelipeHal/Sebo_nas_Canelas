@@ -42,7 +42,8 @@ namespace SeboNasCanelas.Win.Forms.Books
 
         private void btnSaveData_Click(object sender, EventArgs e)
         {
-            if (true)
+            
+            if (String.IsNullOrEmpty(txtPrice.Text))
             {
                 return;
             }
