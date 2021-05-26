@@ -45,7 +45,8 @@ namespace SeboNasCanelas.Win.Forms.Books
             
             if (String.IsNullOrEmpty(txtPrice.Text))
             {
-                return;
+                MessageBox.Show("Please check if all the informations were provided!");
+                return;               
             }
 
             book.Category = txtCategory.Text;
