@@ -18,7 +18,7 @@ namespace SeboNasCanelas.Win.Repositories
                     Title = "Assassin's Creed Valhalla",
                     Console = "XBOX",
                     AgeRating = "+18",
-                    Price = 1120m
+                    Price = 112.00m
                 });
             }
 
@@ -42,7 +42,7 @@ namespace SeboNasCanelas.Win.Repositories
                     Title = "Super Mario World 3",
                     Console = "SNES",
                     AgeRating = "+12",
-                    Price = 150m
+                    Price = 15.00m
                 });
             }
         }

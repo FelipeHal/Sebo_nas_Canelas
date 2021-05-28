@@ -17,6 +17,18 @@ namespace SeboNasCanelas.Win.Forms.Games
 
         private readonly GamesRepository gamesRepository;
 
+        private void OpenForm (Form newForm)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == newForm.GetType())
+                {
+                    return;
+                }
+            }
+            //newForm.MdiParent = this;
+            newForm.Show();
+        }
         public frmListGames()
         {
             InitializeComponent();
@@ -37,7 +49,14 @@ namespace SeboNasCanelas.Win.Forms.Games
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Game selectedgame = (Game)dgvData.SelectedRows[0].DataBoundItem;            
+
+            OpenForm(new frmEditGames());
         }
     }
 }

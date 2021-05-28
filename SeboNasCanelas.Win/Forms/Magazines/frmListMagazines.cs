@@ -1,4 +1,5 @@
-﻿using SeboNasCanelas.Win.Repositories;
+﻿using SeboNasCanelas.Win.AppObjects;
+using SeboNasCanelas.Win.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,18 @@ namespace SeboNasCanelas.Win.Forms.Magazines
     {
         private readonly MagazinesRepository magazinesRepository;
 
+        private void OpenForm (Form newForm)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == newForm.GetType())
+                {
+                    return;
+                }
+            }
+
+            newForm.Show();
+        }
         public frmListMagazines()
         {
             InitializeComponent();
@@ -25,6 +38,13 @@ namespace SeboNasCanelas.Win.Forms.Magazines
         {
             dgvData.AutoGenerateColumns = false;
             dgvData.DataSource = magazinesRepository.List();
+        }
+
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Magazine selectedmagazine = (Magazine)dgvData.SelectedRows[0].DataBoundItem;
+
+            OpenForm(new frmEditMagazines());
         }
     }
 }
