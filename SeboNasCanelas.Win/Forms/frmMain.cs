@@ -71,7 +71,7 @@ namespace SeboNasCanelas.Win.Forms
 
         private void mnuMagazines_Click(object sender, EventArgs e)
         {
-            OpenForm(new frmListMagazines());
+            //OpenForm(new frmListMagazines());
             //frmListMagazines magazines = new frmListMagazines();
 
             //foreach (Form form in Application.OpenForms)
@@ -108,6 +108,19 @@ namespace SeboNasCanelas.Win.Forms
             frmEditGames editGames = new frmEditGames();
             editGames.newGame();
             OpenForm(editGames);
+        }
+
+        private void mnuListMagazines_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmListMagazines());
+        }
+
+        private void mnuNewMagazines_Click(object sender, EventArgs e)
+        {
+            frmEditMagazines editMagazines = new frmEditMagazines();
+            editMagazines.newMagazine();
+            OpenForm(editMagazines);
+
         }
     }
 }

@@ -35,9 +35,11 @@ namespace SeboNasCanelas.Win.Forms
             this.mnuListBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNewBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGames = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuMagazines = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuListGames = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNewGames = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMagazines = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuListMagazines = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewMagazines = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,13 +89,6 @@ namespace SeboNasCanelas.Win.Forms
             this.mnuGames.Text = "Games";
             this.mnuGames.Click += new System.EventHandler(this.mnuGames_Click);
             // 
-            // mnuMagazines
-            // 
-            this.mnuMagazines.Name = "mnuMagazines";
-            this.mnuMagazines.Size = new System.Drawing.Size(75, 20);
-            this.mnuMagazines.Text = "Magazines";
-            this.mnuMagazines.Click += new System.EventHandler(this.mnuMagazines_Click);
-            // 
             // mnuListGames
             // 
             this.mnuListGames.Name = "mnuListGames";
@@ -107,6 +102,30 @@ namespace SeboNasCanelas.Win.Forms
             this.mnuNewGames.Size = new System.Drawing.Size(132, 22);
             this.mnuNewGames.Text = "New Game";
             this.mnuNewGames.Click += new System.EventHandler(this.mnuNewGames_Click);
+            // 
+            // mnuMagazines
+            // 
+            this.mnuMagazines.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuListMagazines,
+            this.mnuNewMagazines});
+            this.mnuMagazines.Name = "mnuMagazines";
+            this.mnuMagazines.Size = new System.Drawing.Size(75, 20);
+            this.mnuMagazines.Text = "Magazines";
+            this.mnuMagazines.Click += new System.EventHandler(this.mnuMagazines_Click);
+            // 
+            // mnuListMagazines
+            // 
+            this.mnuListMagazines.Name = "mnuListMagazines";
+            this.mnuListMagazines.Size = new System.Drawing.Size(152, 22);
+            this.mnuListMagazines.Text = "List magazines";
+            this.mnuListMagazines.Click += new System.EventHandler(this.mnuListMagazines_Click);
+            // 
+            // mnuNewMagazines
+            // 
+            this.mnuNewMagazines.Name = "mnuNewMagazines";
+            this.mnuNewMagazines.Size = new System.Drawing.Size(152, 22);
+            this.mnuNewMagazines.Text = "New magazine";
+            this.mnuNewMagazines.Click += new System.EventHandler(this.mnuNewMagazines_Click);
             // 
             // frmMain
             // 
@@ -138,5 +157,7 @@ namespace SeboNasCanelas.Win.Forms
         private System.Windows.Forms.ToolStripMenuItem mnuNewBooks;
         private System.Windows.Forms.ToolStripMenuItem mnuListGames;
         private System.Windows.Forms.ToolStripMenuItem mnuNewGames;
+        private System.Windows.Forms.ToolStripMenuItem mnuListMagazines;
+        private System.Windows.Forms.ToolStripMenuItem mnuNewMagazines;
     }
 }

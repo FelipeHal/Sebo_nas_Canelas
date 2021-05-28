@@ -10,29 +10,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeboNasCanelas.Win.Forms.Games
+namespace SeboNasCanelas.Win.Forms.Magazines
 {
-    public partial class frmEditGames : Form
+    public partial class frmEditMagazines : Form
     {
-        private readonly GamesRepository gamesRepository;
-        private Game game;
-        public frmEditGames()
+        private readonly MagazinesRepository magazinesRepository;
+        private Magazine magazine;
+        public frmEditMagazines()
         {
             InitializeComponent();
 
-            gamesRepository = new GamesRepository();
+            magazinesRepository = new MagazinesRepository();
         }
 
-        public void newGame()
+        public void newMagazine()
         {
-            game = new Game();
+            magazine = new Magazine();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPrice_TextChanged(object sender, EventArgs e)
+        private void txtTitle_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -45,12 +40,12 @@ namespace SeboNasCanelas.Win.Forms.Games
                 return;
             }
 
-            game.Title = txtTitle.Text;
-            game.Price = Convert.ToDecimal(txtPrice.Text);
+            magazine.Title = txtTitle.Text;
+            magazine.Price = Convert.ToDecimal(txtPrice.Text);
 
-            gamesRepository.Insert(game);
+            magazinesRepository.Insert(magazine);
 
-            MessageBox.Show("Game successfully inserted!");
+            MessageBox.Show("Magazine successfully inserted!");
             txtTitle.Text = "";
             txtPrice.Text = "";
         }
