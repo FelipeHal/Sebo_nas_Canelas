@@ -17,6 +17,19 @@ namespace SeboNasCanelas.Win.Forms.Books
 
         private readonly BooksRepository booksRepository;
 
+        private void OpenForm (Form newForm)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == newForm.GetType())
+                {
+                    return;
+                }
+            }
+
+            //newForm.MdiParent = this;
+            newForm.Show();
+        }
         public frmListBooks()
         {
             InitializeComponent();
@@ -38,7 +51,9 @@ namespace SeboNasCanelas.Win.Forms.Books
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Book selectedbook = (Book)dgvData.SelectedRows[0].DataBoundItem;
-            MessageBox.Show(selectedbook.ID.ToString());
+            //MessageBox.Show(selectedbook.ID.ToString());
+
+            OpenForm(new frmEditBooks());
         }
 
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
