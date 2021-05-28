@@ -103,6 +103,16 @@ namespace SeboNasCanelas.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Mattahan_Umicons_Folder_Games_Folder {
+            get {
+                object obj = ResourceManager.GetObject("Mattahan-Umicons-Folder-Games-Folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Uriy1966_Steel_System_Games {
             get {
                 object obj = ResourceManager.GetObject("Uriy1966-Steel-System-Games", resourceCulture);

@@ -36,6 +36,8 @@ namespace SeboNasCanelas.Win.Forms
             this.mnuNewBooks = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGames = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMagazines = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuListGames = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewGames = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +79,9 @@ namespace SeboNasCanelas.Win.Forms
             // 
             // mnuGames
             // 
+            this.mnuGames.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuListGames,
+            this.mnuNewGames});
             this.mnuGames.Name = "mnuGames";
             this.mnuGames.Size = new System.Drawing.Size(55, 20);
             this.mnuGames.Text = "Games";
@@ -88,6 +93,20 @@ namespace SeboNasCanelas.Win.Forms
             this.mnuMagazines.Size = new System.Drawing.Size(75, 20);
             this.mnuMagazines.Text = "Magazines";
             this.mnuMagazines.Click += new System.EventHandler(this.mnuMagazines_Click);
+            // 
+            // mnuListGames
+            // 
+            this.mnuListGames.Name = "mnuListGames";
+            this.mnuListGames.Size = new System.Drawing.Size(132, 22);
+            this.mnuListGames.Text = "List games";
+            this.mnuListGames.Click += new System.EventHandler(this.mnuListGames_Click);
+            // 
+            // mnuNewGames
+            // 
+            this.mnuNewGames.Name = "mnuNewGames";
+            this.mnuNewGames.Size = new System.Drawing.Size(132, 22);
+            this.mnuNewGames.Text = "New Game";
+            this.mnuNewGames.Click += new System.EventHandler(this.mnuNewGames_Click);
             // 
             // frmMain
             // 
@@ -117,5 +136,7 @@ namespace SeboNasCanelas.Win.Forms
         private System.Windows.Forms.ToolStripMenuItem mnuMagazines;
         private System.Windows.Forms.ToolStripMenuItem mnuListBooks;
         private System.Windows.Forms.ToolStripMenuItem mnuNewBooks;
+        private System.Windows.Forms.ToolStripMenuItem mnuListGames;
+        private System.Windows.Forms.ToolStripMenuItem mnuNewGames;
     }
 }

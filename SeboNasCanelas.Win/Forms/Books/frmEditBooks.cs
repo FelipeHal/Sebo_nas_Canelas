@@ -34,9 +34,11 @@ namespace SeboNasCanelas.Win.Forms.Books
             book = booksRepository.Find(id);
 
             //TODO. - inverter:
-            //book.Category = txtCategory.Text;
-            //book.Title = txtTitle.Text;
-            //book.Price = Convert.ToDecimal(txtPrice.Text);
+            txtCategory.Text = book.Category;
+            txtTitle.Text = book.Title;
+            txtPrice.Text = Convert.ToString(book.Price);
+
+            booksRepository.Update(book);
         }
 
 
@@ -48,6 +50,7 @@ namespace SeboNasCanelas.Win.Forms.Books
                 MessageBox.Show("Please check if all the informations were provided!");
                 return;               
             }
+
 
             book.Category = txtCategory.Text;
             book.Title = txtTitle.Text;

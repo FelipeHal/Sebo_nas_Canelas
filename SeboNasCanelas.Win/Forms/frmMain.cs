@@ -54,7 +54,7 @@ namespace SeboNasCanelas.Win.Forms
 
         private void mnuGames_Click(object sender, EventArgs e)
         {
-            OpenForm(new frmListGames());
+            //OpenForm(new frmListGames());
             //frmListGames games = new frmListGames();
 
             //foreach (Form form in Application.OpenForms)
@@ -96,6 +96,18 @@ namespace SeboNasCanelas.Win.Forms
             frmEditBooks editBooks = new frmEditBooks();
             editBooks.newBook();
             OpenForm(editBooks);
+        }
+
+        private void mnuListGames_Click(object sender, EventArgs e)
+        {
+            OpenForm(new frmListGames());
+        }
+
+        private void mnuNewGames_Click(object sender, EventArgs e)
+        {
+            frmEditGames editGames = new frmEditGames();
+            editGames.newGame();
+            OpenForm(editGames);
         }
     }
 }
