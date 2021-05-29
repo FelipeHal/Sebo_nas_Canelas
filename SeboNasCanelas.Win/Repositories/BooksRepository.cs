@@ -89,6 +89,7 @@ namespace SeboNasCanelas.Win.Repositories
 
         public void Insert(Book book)
         {
+            book.ID = _data.Any() ? _data.Max(x => x.ID) + 1 : 1;
             _data.Add(book);
                        
         }

@@ -33,10 +33,10 @@ namespace SeboNasCanelas.Win.Forms.Games
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -80,12 +80,22 @@ namespace SeboNasCanelas.Win.Forms.Games
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SeboNasCanelas.Win.Properties.Resources.Uriy1966_Steel_System_Games;
+            this.pictureBox1.Location = new System.Drawing.Point(291, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 35);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // ID
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Width = 43;
             // 
             // Title
@@ -104,15 +114,6 @@ namespace SeboNasCanelas.Win.Forms.Games
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
             this.Price.Width = 58;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SeboNasCanelas.Win.Properties.Resources.Uriy1966_Steel_System_Games;
-            this.pictureBox1.Location = new System.Drawing.Point(291, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 35);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // frmListGames
             // 

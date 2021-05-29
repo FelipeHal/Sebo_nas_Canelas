@@ -14,22 +14,8 @@ namespace SeboNasCanelas.Win.Forms.Books
 {
     public partial class frmListBooks : Form
     {
-
         private readonly BooksRepository booksRepository;
 
-        private void OpenForm (Form newForm)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == newForm.GetType())
-                {
-                    return;
-                }
-            }
-
-            //newForm.MdiParent = this;
-            newForm.Show();
-        }
         public frmListBooks()
         {
             InitializeComponent();
@@ -37,27 +23,47 @@ namespace SeboNasCanelas.Win.Forms.Books
             booksRepository = new BooksRepository();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void frmList_Load(object sender, EventArgs e)
         {
-            dgvData.AutoGenerateColumns = false;
-            dgvData.DataSource = booksRepository.List();
+            LoadBooks();
         }
 
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Book selectedbook = (Book)dgvData.SelectedRows[0].DataBoundItem;
-            //MessageBox.Show(selectedbook.ID.ToString());
 
-            OpenForm(new frmEditBooks());
+            frmEditBooks editBooks = new frmEditBooks();
+            editBooks.editBook(selectedbook.ID);
+            OpenEditForm(editBooks);
         }
 
-        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void LoadBooks()
         {
+            dgvData.DataSource = null;
+
+            dgvData.AutoGenerateColumns = false;
+            dgvData.DataSource = booksRepository.List();
+        }
+
+
+        private void OpenEditForm(Form openForm)
+        {
+            frmMain main = null;
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is frmMain)
+                {
+                    main = (frmMain)form;
+                    break;
+                }
+            }
+
+            if (main != null)
+            {
+                main.OpenForm(openForm);
+            }
 
         }
     }

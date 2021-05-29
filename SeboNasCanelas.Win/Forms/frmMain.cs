@@ -20,7 +20,7 @@ namespace SeboNasCanelas.Win.Forms
             InitializeComponent();
         }
 
-        private void OpenForm(Form newForm)
+        public void OpenForm(Form newForm)
         {
             foreach (Form form in Application.OpenForms)
             {

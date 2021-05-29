@@ -24,6 +24,7 @@ namespace SeboNasCanelas.Win.Forms.Books
             booksRepository = new BooksRepository();
         }
 
+
         public void newBook()
         {
             book = new Book();
@@ -32,15 +33,18 @@ namespace SeboNasCanelas.Win.Forms.Books
         public void editBook(int id)
         {
             book = booksRepository.Find(id);
+            if (book != null)
+            {
+                txtCategory.Text = book.Category;
+                txtTitle.Text = book.Title;
+                txtPrice.Text = Convert.ToString(book.Price);
+            }
 
             //TODO. - inverter:
-            txtCategory.Text = book.Category;
-            txtTitle.Text = book.Title;
-            txtPrice.Text = Convert.ToString(book.Price);
-
-            booksRepository.Update(book);
+            //book.Category = txtCategory.Text;
+            //book.Title = txtTitle.Text;
+            //book.Price = Convert.ToDecimal(txtPrice.Text);
         }
-
 
         private void btnSaveData_Click(object sender, EventArgs e)
         {
@@ -50,23 +54,56 @@ namespace SeboNasCanelas.Win.Forms.Books
                 MessageBox.Show("Please check if all the informations were provided!");
                 return;               
             }
-
+            
+            else if (String.IsNullOrEmpty(txtCategory.Text))
+            {
+                MessageBox.Show("Please check if all the informations were provided!");
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtTitle.Text))
+            {
+                MessageBox.Show("Please check if all the informations were provided!");
+                return;
+            }           
 
             book.Category = txtCategory.Text;
             book.Title = txtTitle.Text;
             book.Price = Convert.ToDecimal(txtPrice.Text);
 
-            booksRepository.Insert(book);
+            if (book.ID <= 0)
+            {
+                booksRepository.Insert(book);
+            }
+            else
+            {
+                booksRepository.Update(book);
+            }
 
             MessageBox.Show("Book successfully inserted!");
             txtCategory.Text = "";
             txtTitle.Text = "";
             txtPrice.Text = "";
+
+            UpdateBooksList();
         }
 
-        private void frmEditBooks_Load(object sender, EventArgs e)
+        private void UpdateBooksList()
         {
+            frmListBooks listBooks = null;
 
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is frmListBooks)
+                {
+                    listBooks = (frmListBooks)form;
+                    break;
+                }
+            }
+
+            if (listBooks != null)
+            {
+                listBooks.LoadBooks();
+            }
         }
     }
 }

@@ -34,11 +34,11 @@ namespace SeboNasCanelas.Win.Forms.Books
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +65,6 @@ namespace SeboNasCanelas.Win.Forms.Books
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(720, 2);
             this.label2.TabIndex = 1;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dgvData
             // 
@@ -86,8 +85,17 @@ namespace SeboNasCanelas.Win.Forms.Books
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(720, 395);
             this.dgvData.TabIndex = 2;
-            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SeboNasCanelas.Win.Properties.Resources.Itzikgur_My_Seven_Books_2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(260, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // ID
             // 
@@ -95,6 +103,7 @@ namespace SeboNasCanelas.Win.Forms.Books
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Width = 43;
             // 
             // Category
@@ -103,6 +112,7 @@ namespace SeboNasCanelas.Win.Forms.Books
             this.Category.DataPropertyName = "Category";
             this.Category.HeaderText = "Category";
             this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
             this.Category.Width = 80;
             // 
             // Title
@@ -111,6 +121,7 @@ namespace SeboNasCanelas.Win.Forms.Books
             this.Title.DataPropertyName = "Title";
             this.Title.HeaderText = "Title";
             this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
             // 
             // Price
             // 
@@ -122,17 +133,8 @@ namespace SeboNasCanelas.Win.Forms.Books
             this.Price.DefaultCellStyle = dataGridViewCellStyle1;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             this.Price.Width = 58;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::SeboNasCanelas.Win.Properties.Resources.Itzikgur_My_Seven_Books_2;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(260, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // frmListBooks
             // 
@@ -160,10 +162,10 @@ namespace SeboNasCanelas.Win.Forms.Books
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
