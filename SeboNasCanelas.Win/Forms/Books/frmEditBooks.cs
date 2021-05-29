@@ -39,11 +39,6 @@ namespace SeboNasCanelas.Win.Forms.Books
                 txtTitle.Text = book.Title;
                 txtPrice.Text = Convert.ToString(book.Price);
             }
-
-            //TODO. - inverter:
-            //book.Category = txtCategory.Text;
-            //book.Title = txtTitle.Text;
-            //book.Price = Convert.ToDecimal(txtPrice.Text);
         }
 
         private void btnSaveData_Click(object sender, EventArgs e)

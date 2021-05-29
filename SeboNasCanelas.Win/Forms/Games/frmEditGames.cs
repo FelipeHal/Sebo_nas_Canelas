@@ -16,6 +16,7 @@ namespace SeboNasCanelas.Win.Forms.Games
     {
         private readonly GamesRepository gamesRepository;
         private Game game;
+
         public frmEditGames()
         {
             InitializeComponent();
@@ -23,23 +24,28 @@ namespace SeboNasCanelas.Win.Forms.Games
             gamesRepository = new GamesRepository();
         }
 
+
         public void newGame()
         {
             game = new Game();
         }
-        private void label1_Click(object sender, EventArgs e)
+        public void editGame(int id)
         {
-
+            game = gamesRepository.Find(id);
+            if (game != null)
+            {                
+                txtTitle.Text = game.Title;
+                txtPrice.Text = Convert.ToString(game.Price);
+            }
         }
-
-        private void txtPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSaveData_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(txtPrice.Text))
+            {
+                MessageBox.Show("Please check if all the informations were provided!");
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtTitle.Text))
             {
                 MessageBox.Show("Please check if all the informations were provided!");
                 return;
@@ -48,11 +54,39 @@ namespace SeboNasCanelas.Win.Forms.Games
             game.Title = txtTitle.Text;
             game.Price = Convert.ToDecimal(txtPrice.Text);
 
-            gamesRepository.Insert(game);
+            if (game.ID <= 0)
+            {
+                gamesRepository.Insert(game);
+            }
+            else
+            {
+                gamesRepository.Update(game);
+            }            
 
             MessageBox.Show("Game successfully inserted!");
             txtTitle.Text = "";
             txtPrice.Text = "";
+
+            UpdateGamesList();
+        }
+
+        private void UpdateGamesList()
+        {
+            frmListGames listGames = null;
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is frmListGames)
+                {
+                    listGames = (frmListGames)form;
+                    break;
+                }
+            }
+
+            if (listGames != null)
+            {
+                listGames.LoadGames();
+            }
         }
     }
 }

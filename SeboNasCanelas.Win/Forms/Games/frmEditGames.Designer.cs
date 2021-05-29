@@ -89,7 +89,6 @@ namespace SeboNasCanelas.Win.Forms.Games
             this.label1.TabIndex = 13;
             this.label1.Text = "Edit games";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtPrice
             // 
@@ -97,7 +96,6 @@ namespace SeboNasCanelas.Win.Forms.Games
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(85, 23);
             this.txtPrice.TabIndex = 16;
-            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // label5
             // 

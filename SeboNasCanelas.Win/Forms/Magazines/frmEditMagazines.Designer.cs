@@ -106,7 +106,6 @@ namespace SeboNasCanelas.Win.Forms.Magazines
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(650, 23);
             this.txtTitle.TabIndex = 18;
-            this.txtTitle.TextChanged += new System.EventHandler(this.txtTitle_TextChanged);
             // 
             // btnSaveData
             // 

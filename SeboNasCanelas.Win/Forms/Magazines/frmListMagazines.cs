@@ -16,18 +16,7 @@ namespace SeboNasCanelas.Win.Forms.Magazines
     {
         private readonly MagazinesRepository magazinesRepository;
 
-        private void OpenForm (Form newForm)
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.GetType() == newForm.GetType())
-                {
-                    return;
-                }
-            }
-
-            newForm.Show();
-        }
+        
         public frmListMagazines()
         {
             InitializeComponent();
@@ -36,15 +25,44 @@ namespace SeboNasCanelas.Win.Forms.Magazines
 
         private void frmListMagazines_Load(object sender, EventArgs e)
         {
-            dgvData.AutoGenerateColumns = false;
-            dgvData.DataSource = magazinesRepository.List();
+            LoadMagazines();
         }
 
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Magazine selectedmagazine = (Magazine)dgvData.SelectedRows[0].DataBoundItem;
 
-            OpenForm(new frmEditMagazines());
+            frmEditMagazines editMagazines = new frmEditMagazines();
+            editMagazines.editMagazine(selectedmagazine.ID);
+            OpenEditForm(editMagazines);
+        }
+
+        public void LoadMagazines()
+        {
+            dgvData.DataSource = null;
+
+            dgvData.AutoGenerateColumns = false;
+            dgvData.DataSource = magazinesRepository.List();
+        }
+
+        private void OpenEditForm(Form openForm)
+        {
+            frmMain main = null;
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is frmMain)
+                {
+                    main = (frmMain)form;
+                    break;
+                }
+            }
+
+            if (main != null)
+            {
+                main.OpenForm(openForm);
+            }
+
         }
     }
 }
