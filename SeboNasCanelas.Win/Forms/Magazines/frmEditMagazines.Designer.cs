@@ -85,6 +85,7 @@ namespace SeboNasCanelas.Win.Forms.Magazines
             // 
             this.txtPrice.Location = new System.Drawing.Point(82, 84);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PlaceholderText = "Ex. 10.00";
             this.txtPrice.Size = new System.Drawing.Size(85, 23);
             this.txtPrice.TabIndex = 20;
             // 
@@ -104,6 +105,7 @@ namespace SeboNasCanelas.Win.Forms.Magazines
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTitle.Location = new System.Drawing.Point(82, 55);
             this.txtTitle.Name = "txtTitle";
+            this.txtTitle.PlaceholderText = "Insert new title (Ex. The New Avengers)";
             this.txtTitle.Size = new System.Drawing.Size(650, 23);
             this.txtTitle.TabIndex = 18;
             // 

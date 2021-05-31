@@ -30,8 +30,7 @@ namespace SeboNasCanelas.Win.Forms.Games
         {
             LoadGames();
         }
-           
-
+         
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Game selectedgame = (Game)dgvData.SelectedRows[0].DataBoundItem;

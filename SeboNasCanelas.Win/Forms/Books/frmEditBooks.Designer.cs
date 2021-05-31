@@ -87,10 +87,12 @@ namespace SeboNasCanelas.Win.Forms.Books
             // 
             // txtCategory
             // 
+            this.txtCategory.AccessibleDescription = "";
             this.txtCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCategory.Location = new System.Drawing.Point(82, 71);
             this.txtCategory.Name = "txtCategory";
+            this.txtCategory.PlaceholderText = "Insert new category (Ex. Fantasia)";
             this.txtCategory.Size = new System.Drawing.Size(650, 23);
             this.txtCategory.TabIndex = 8;
             // 
@@ -110,6 +112,7 @@ namespace SeboNasCanelas.Win.Forms.Books
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTitle.Location = new System.Drawing.Point(82, 100);
             this.txtTitle.Name = "txtTitle";
+            this.txtTitle.PlaceholderText = "Insert new title (Ex. Harry Potter and the Philosopher\'s Stone)";
             this.txtTitle.Size = new System.Drawing.Size(650, 23);
             this.txtTitle.TabIndex = 10;
             // 
@@ -117,6 +120,7 @@ namespace SeboNasCanelas.Win.Forms.Books
             // 
             this.txtPrice.Location = new System.Drawing.Point(82, 129);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PlaceholderText = "Ex. 10.60";
             this.txtPrice.Size = new System.Drawing.Size(85, 23);
             this.txtPrice.TabIndex = 12;
             // 

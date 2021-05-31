@@ -61,6 +61,7 @@ namespace SeboNasCanelas.Win.Repositories
         }
         public void Insert(Game game)
         {
+            game.ID = _data.Any() ? _data.Max(x => x.ID) + 1 : 1;
             _data.Add(game);
         }
 

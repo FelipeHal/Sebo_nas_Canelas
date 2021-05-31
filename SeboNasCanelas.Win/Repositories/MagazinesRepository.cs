@@ -58,7 +58,8 @@ namespace SeboNasCanelas.Win.Repositories
         }
 
         public void Insert(Magazine magazine)
-        {            
+        {
+            magazine.ID = _data.Any() ? _data.Max(x => x.ID) + 1 : 1;
             _data.Add(magazine);
         }
 

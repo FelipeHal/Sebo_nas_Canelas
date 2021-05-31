@@ -46,6 +46,7 @@ namespace SeboNasCanelas.Win.Forms.Games
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTitle.Location = new System.Drawing.Point(82, 57);
             this.txtTitle.Name = "txtTitle";
+            this.txtTitle.PlaceholderText = "Insert new title (Ex. Don\'t Starve Together)";
             this.txtTitle.Size = new System.Drawing.Size(650, 23);
             this.txtTitle.TabIndex = 10;
             // 
@@ -94,6 +95,7 @@ namespace SeboNasCanelas.Win.Forms.Games
             // 
             this.txtPrice.Location = new System.Drawing.Point(82, 86);
             this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PlaceholderText = "Ex. 10.00";
             this.txtPrice.Size = new System.Drawing.Size(85, 23);
             this.txtPrice.TabIndex = 16;
             // 
