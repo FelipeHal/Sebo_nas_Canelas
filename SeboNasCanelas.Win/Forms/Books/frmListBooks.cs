@@ -14,13 +14,13 @@ namespace SeboNasCanelas.Win.Forms.Books
 {
     public partial class frmListBooks : Form
     {
-        private readonly BooksRepository booksRepository;
+        private readonly IBooksRepository booksRepository;
 
-        public frmListBooks()
+        public frmListBooks(IBooksRepository booksRepository)
         {
             InitializeComponent();
-
-            booksRepository = new BooksRepository();
+            this.booksRepository = booksRepository;
+            //booksRepository = new BooksRepository();
         }
 
 
@@ -33,7 +33,7 @@ namespace SeboNasCanelas.Win.Forms.Books
         {
             Book selectedbook = (Book)dgvData.SelectedRows[0].DataBoundItem;
 
-            frmEditBooks editBooks = new frmEditBooks();
+            frmEditBooks editBooks = new frmEditBooks(booksRepository);
             editBooks.editBook(selectedbook.ID);
             OpenEditForm(editBooks);
         }

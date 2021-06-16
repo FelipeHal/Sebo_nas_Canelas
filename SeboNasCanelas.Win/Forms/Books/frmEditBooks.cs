@@ -14,14 +14,14 @@ namespace SeboNasCanelas.Win.Forms.Books
 {
     public partial class frmEditBooks : Form
     {
-        private readonly BooksRepository booksRepository;
+        private readonly IBooksRepository booksRepository;
         private Book book;
 
-        public frmEditBooks()
+        public frmEditBooks(IBooksRepository booksRepository)
         {
             InitializeComponent();
-
-            booksRepository = new BooksRepository();
+            this.booksRepository = booksRepository;
+            //booksRepository = new BooksRepository();
         }
 
 

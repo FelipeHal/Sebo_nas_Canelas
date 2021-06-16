@@ -1,6 +1,7 @@
 ﻿using SeboNasCanelas.Win.Forms.Books;
 using SeboNasCanelas.Win.Forms.Games;
 using SeboNasCanelas.Win.Forms.Magazines;
+using SeboNasCanelas.Win.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +16,12 @@ namespace SeboNasCanelas.Win.Forms
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        private readonly IServiceProvider serviceProvider;
+
+        public frmMain(IServiceProvider serviceProvider)
         {
             InitializeComponent();
+            this.serviceProvider = serviceProvider;
         }
 
         public void OpenForm(Form newForm)
@@ -88,12 +92,14 @@ namespace SeboNasCanelas.Win.Forms
 
         private void mnuListBooks_Click(object sender, EventArgs e)
         {
-            OpenForm(new frmListBooks());
+            var booksRepository = (IBooksRepository)serviceProvider.GetService(typeof(IBooksRepository));
+            OpenForm(new frmListBooks(booksRepository));
         }
 
         private void mnuNewBooks_Click(object sender, EventArgs e)
         {
-            frmEditBooks editBooks = new frmEditBooks();
+            var booksRepository = (IBooksRepository)serviceProvider.GetService(typeof(IBooksRepository));
+            frmEditBooks editBooks = new frmEditBooks(booksRepository);
             editBooks.newBook();
             OpenForm(editBooks);
         }
