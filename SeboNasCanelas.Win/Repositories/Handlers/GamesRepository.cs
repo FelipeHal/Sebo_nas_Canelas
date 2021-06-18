@@ -63,7 +63,7 @@ namespace SeboNasCanelas.Win.Repositories
         {
             //LoadData();
             //return _data.FirstOrDefault(x => x.ID == id);
-            return context.Games.Find();
+            return context.Games.Find(id);
         }
         public void Insert(Game game)
         {
