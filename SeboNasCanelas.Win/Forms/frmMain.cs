@@ -120,12 +120,14 @@ namespace SeboNasCanelas.Win.Forms
 
         private void mnuListMagazines_Click(object sender, EventArgs e)
         {
-            OpenForm(new frmListMagazines());
+            var magazinesRepository = (IMagazinesRepository)serviceProvider.GetService(typeof(IMagazinesRepository));
+            OpenForm(new frmListMagazines(magazinesRepository));
         }
 
         private void mnuNewMagazines_Click(object sender, EventArgs e)
         {
-            frmEditMagazines editMagazines = new frmEditMagazines();
+            var magazinesRepository = (IMagazinesRepository)serviceProvider.GetService(typeof(IMagazinesRepository));
+            frmEditMagazines editMagazines = new frmEditMagazines(magazinesRepository);
             editMagazines.newMagazine();
             OpenForm(editMagazines);
 

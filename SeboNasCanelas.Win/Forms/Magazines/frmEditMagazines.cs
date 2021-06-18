@@ -14,13 +14,13 @@ namespace SeboNasCanelas.Win.Forms.Magazines
 {
     public partial class frmEditMagazines : Form
     {
-        private readonly MagazinesRepository magazinesRepository;
+        private readonly IMagazinesRepository magazinesRepository;
         private Magazine magazine;
-        public frmEditMagazines()
+
+        public frmEditMagazines(IMagazinesRepository magazinesRepository)
         {
             InitializeComponent();
-
-            magazinesRepository = new MagazinesRepository();
+            this.magazinesRepository = magazinesRepository;
         }
 
         public void newMagazine()

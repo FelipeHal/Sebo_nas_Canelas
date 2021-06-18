@@ -14,6 +14,8 @@ namespace SeboNasCanelas.Win
 
         public DbSet<Game> Games { get; set; }
 
+        public DbSet<Magazine> Magazines { get; set; }
+
         public SeboNasCanelasContext() : base()
         {
             

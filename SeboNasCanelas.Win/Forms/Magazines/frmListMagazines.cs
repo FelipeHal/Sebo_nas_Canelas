@@ -14,13 +14,13 @@ namespace SeboNasCanelas.Win.Forms.Magazines
 {
     public partial class frmListMagazines : Form
     {
-        private readonly MagazinesRepository magazinesRepository;
+        private readonly IMagazinesRepository magazinesRepository;
 
         
-        public frmListMagazines()
+        public frmListMagazines(IMagazinesRepository magazinesRepository)
         {
             InitializeComponent();
-            magazinesRepository = new MagazinesRepository();
+            this.magazinesRepository = magazinesRepository;
         }
 
         private void frmListMagazines_Load(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace SeboNasCanelas.Win.Forms.Magazines
         {
             Magazine selectedmagazine = (Magazine)dgvData.SelectedRows[0].DataBoundItem;
 
-            frmEditMagazines editMagazines = new frmEditMagazines();
+            frmEditMagazines editMagazines = new frmEditMagazines(magazinesRepository);
             editMagazines.editMagazine(selectedmagazine.ID);
             OpenEditForm(editMagazines);
         }

@@ -33,6 +33,8 @@ namespace SeboNasCanelas.Win
                     services.AddScoped<IBooksRepository, BooksRepository>();
 
                     services.AddScoped<IGamesRepository, GamesRepository>();
+
+                    services.AddScoped<IMagazinesRepository, MagazinesRepository>();
                 });
 
             var host = builder.Build();
