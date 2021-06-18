@@ -31,6 +31,8 @@ namespace SeboNasCanelas.Win
                     services.AddDbContext<SeboNasCanelasContext>();
 
                     services.AddScoped<IBooksRepository, BooksRepository>();
+
+                    services.AddScoped<IGamesRepository, GamesRepository>();
                 });
 
             var host = builder.Build();
