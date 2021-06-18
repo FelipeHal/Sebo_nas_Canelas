@@ -15,14 +15,13 @@ namespace SeboNasCanelas.Win.Forms.Games
     public partial class frmListGames : Form
     {
 
-        private readonly GamesRepository gamesRepository;
+        private readonly IGamesRepository gamesRepository;
 
 
-        public frmListGames()
+        public frmListGames(IGamesRepository gamesRepository)
         {
             InitializeComponent();
-
-            gamesRepository = new GamesRepository(); 
+            this.gamesRepository = gamesRepository;
         }
 
 
@@ -35,7 +34,7 @@ namespace SeboNasCanelas.Win.Forms.Games
         {
             Game selectedgame = (Game)dgvData.SelectedRows[0].DataBoundItem;
 
-            frmEditGames editGames = new frmEditGames();
+            frmEditGames editGames = new frmEditGames(gamesRepository);
             editGames.editGame(selectedgame.ID);
             OpenEditForm(editGames);
         }

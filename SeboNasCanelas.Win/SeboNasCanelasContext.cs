@@ -12,6 +12,8 @@ namespace SeboNasCanelas.Win
     {
         public DbSet<Book> Books { get; set; }
 
+        public DbSet<Game> Games { get; set; }
+
         public SeboNasCanelasContext() : base()
         {
             
@@ -23,13 +25,6 @@ namespace SeboNasCanelas.Win
             base.OnConfiguring(optionsBuilder);
 
             optionsBuilder.UseSqlServer("Data Source=(LOCAL); Initial Catalog=SeboNasCanelas; User ID=Sa; Password=SqlServer2019!");
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            
         }
     }
 }

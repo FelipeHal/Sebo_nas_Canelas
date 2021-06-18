@@ -106,12 +106,14 @@ namespace SeboNasCanelas.Win.Forms
 
         private void mnuListGames_Click(object sender, EventArgs e)
         {
-            OpenForm(new frmListGames());
+            var gamesRepository = (IGamesRepository)serviceProvider.GetService(typeof(IGamesRepository));
+            OpenForm(new frmListGames(gamesRepository));
         }
 
         private void mnuNewGames_Click(object sender, EventArgs e)
         {
-            frmEditGames editGames = new frmEditGames();
+            var gamesRepository = (IGamesRepository)serviceProvider.GetService(typeof(IGamesRepository));
+            frmEditGames editGames = new frmEditGames(gamesRepository);
             editGames.newGame();
             OpenForm(editGames);
         }

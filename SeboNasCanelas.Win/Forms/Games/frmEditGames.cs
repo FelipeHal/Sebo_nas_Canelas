@@ -14,14 +14,13 @@ namespace SeboNasCanelas.Win.Forms.Games
 {
     public partial class frmEditGames : Form
     {
-        private readonly GamesRepository gamesRepository;
+        private readonly IGamesRepository gamesRepository;
         private Game game;
 
-        public frmEditGames()
+        public frmEditGames(IGamesRepository gamesRepository)
         {
             InitializeComponent();
-
-            gamesRepository = new GamesRepository();
+            this.gamesRepository = gamesRepository;
         }
 
 
